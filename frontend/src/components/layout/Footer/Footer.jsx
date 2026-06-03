@@ -1,5 +1,6 @@
 import { Link, NavLink } from 'react-router-dom';
 import { NAV_LINKS, FOOTER_SERVICES, FOOTER_CONTACT, ROUTES } from '@/utils/constants';
+import Logo from '@/components/shared/Logo';
 import styles from './Footer.module.scss';
 
 const EmailIcon = () => (
@@ -45,7 +46,8 @@ const Footer = () => {
             {/* Brand column */}
             <div className={styles.brand}>
               <Link to={ROUTES.HOME} className={styles.logo} aria-label="Accetraa – go to homepage">
-                Accetraa
+                <Logo size={38} />
+                <span className={styles.logoText}>Accetraa</span>
               </Link>
               <p className={styles.description}>
                 Accelerating digital transformation for forward-thinking enterprises. We engineer

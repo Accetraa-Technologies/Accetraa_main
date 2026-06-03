@@ -42,16 +42,23 @@
 }
 
 .logo {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: $space-3;
+  text-decoration: none;
+  border-radius: $radius-md;
+  transition: opacity $transition-fast;
+
+  &:hover { opacity: 0.85; }
+  &:focus-visible { @include focus-ring($color-primary-light); }
+}
+
+.logoText {
   font-size: $font-size-2xl;
   font-weight: $font-weight-bold;
   color: $color-white;
   letter-spacing: $tracking-tight;
-  text-decoration: none;
-  transition: color $transition-fast;
-
-  &:hover { color: $color-primary-light; }
-  &:focus-visible { @include focus-ring($color-primary-light); }
+  line-height: 1;
 }
 
 .description {

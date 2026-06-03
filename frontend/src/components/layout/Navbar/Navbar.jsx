@@ -5,6 +5,7 @@ import { NAV_LINKS, NAV_CTA } from '@/utils/constants';
 import useScrollLock from '@/hooks/useScrollLock';
 import useFocusTrap from '@/hooks/useFocusTrap';
 import Button from '@/components/ui/Button';
+import Logo from '@/components/shared/Logo';
 import styles from './Navbar.module.scss';
 
 const Navbar = () => {
@@ -86,7 +87,8 @@ const Navbar = () => {
       >
         <div className={styles.mobilePanelHeader}>
           <Link to="/" className={styles.mobileLogo} onClick={closeMobileMenu}>
-            Accetraa
+            <Logo size={32} />
+            <span>Accetraa</span>
           </Link>
           <button
             className={styles.closeBtn}
@@ -134,8 +136,9 @@ const Navbar = () => {
       <header className={styles.header}>
         <nav className={styles.nav} aria-label="Main navigation">
 
-          <Link to="/" className={styles.logo}>
-            Accetraa
+          <Link to="/" className={styles.logo} aria-label="Accetraa — go to homepage">
+            <Logo size={34} />
+            <span className={styles.logoText}>Accetraa</span>
           </Link>
 
           {/* Desktop links */}

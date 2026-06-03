@@ -87,11 +87,19 @@
 }
 
 .mobileLogo {
-  font-size: $font-size-xl;
-  font-weight: $font-weight-bold;
-  color: $color-primary;
-  letter-spacing: $tracking-tight;
+  display: inline-flex;
+  align-items: center;
+  gap: $space-2;
   text-decoration: none;
+  border-radius: $radius-md;
+
+  span {
+    font-size: $font-size-xl;
+    font-weight: $font-weight-bold;
+    color: $color-primary;
+    letter-spacing: $tracking-tight;
+    line-height: 1;
+  }
 }
 
 .closeBtn {
@@ -185,20 +193,28 @@
   gap: $space-4;
 }
 
-// ─── Logo ─────────────────────────────────────────────────────────────────────
+// ─── Logo (desktop header) ────────────────────────────────────────────────────
 
 .logo {
+  display: inline-flex;
+  align-items: center;
+  gap: $space-2;
+  text-decoration: none;
+  flex-shrink: 0;
+  border-radius: $radius-md;
+  padding: 2px $space-1;
+
+  &:focus-visible {
+    @include focus-ring;
+  }
+}
+
+.logoText {
   font-size: $font-size-xl;
   font-weight: $font-weight-bold;
   color: $color-primary;
   letter-spacing: $tracking-tight;
-  text-decoration: none;
-  flex-shrink: 0;
-
-  &:focus-visible {
-    @include focus-ring;
-    border-radius: $radius-sm;
-  }
+  line-height: 1;
 }
 
 // ─── Desktop Nav Links ────────────────────────────────────────────────────────

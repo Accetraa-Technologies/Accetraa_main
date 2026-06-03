@@ -29,7 +29,7 @@ export const FOOTER_SERVICES = [
 export const FOOTER_CONTACT = {
   email:   'contact@accetraa.com',
   phone:   '+91 98765 43210',
-  address: 'Mumbai, Maharashtra, India',
+  address: 'Hubbali, Karnataka, India',
 };
 
 export const BREAKPOINTS = {
