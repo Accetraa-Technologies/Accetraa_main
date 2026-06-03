@@ -16,6 +16,22 @@ export const NAV_LINKS = [
   { label: 'Careers',   path: ROUTES.CAREERS },
 ];
 
+export const NAV_CTA = { label: 'Book Consultation', path: ROUTES.CONTACT };
+
+export const FOOTER_SERVICES = [
+  { label: 'Digital Transformation', path: ROUTES.SERVICES },
+  { label: 'Product Development',    path: ROUTES.SERVICES },
+  { label: 'Data & Analytics',       path: ROUTES.SERVICES },
+  { label: 'Cloud Solutions',        path: ROUTES.SERVICES },
+  { label: 'AI & Automation',        path: ROUTES.SERVICES },
+];
+
+export const FOOTER_CONTACT = {
+  email:   'contact@accetraa.com',
+  phone:   '+91 98765 43210',
+  address: 'Mumbai, Maharashtra, India',
+};
+
 export const BREAKPOINTS = {
   SM:  480,
   MD:  768,

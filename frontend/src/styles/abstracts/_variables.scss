@@ -70,7 +70,10 @@ $border-color-focus: $color-primary;
 
 // ─── 2. TYPOGRAPHY SYSTEM ──────────────────────────────────────────────────────
 
-$font-primary: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+// 'Inter Fallback' is a local @font-face defined in _reset.scss that makes
+// Arial match Inter's exact line metrics. When Inter loads and swaps in,
+// the layout does not shift — eliminating font-swap CLS entirely.
+$font-primary: 'Inter', 'Inter Fallback', system-ui, -apple-system, 'Segoe UI', sans-serif;
 $font-mono:    'JetBrains Mono', 'Cascadia Code', 'Courier New', monospace;
 
 // Type scale

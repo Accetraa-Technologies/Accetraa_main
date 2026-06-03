@@ -13,7 +13,8 @@ const Portfolio = lazy(() => import('@/pages/Portfolio'));
 const Contact   = lazy(() => import('@/pages/Contact'));
 const Careers      = lazy(() => import('@/pages/Careers'));
 const NotFound     = lazy(() => import('@/pages/NotFound'));
-const DesignSystem = lazy(() => import('@/pages/DesignSystem'));
+const DesignSystem   = lazy(() => import('@/pages/DesignSystem'));
+const LayoutPreview  = lazy(() => import('@/pages/LayoutPreview'));
 
 const MainLayout = () => (
   <>
@@ -37,8 +38,9 @@ const router = createBrowserRouter([
       { path: ROUTES.PORTFOLIO, element: <Portfolio /> },
       { path: ROUTES.CONTACT,   element: <Contact /> },
       { path: ROUTES.CAREERS,   element: <Careers /> },
-      { path: '/_design',       element: <DesignSystem /> },
-      { path: '*',              element: <NotFound /> },
+      { path: '/_design',         element: <DesignSystem /> },
+      { path: '/_layout-preview', element: <LayoutPreview /> },
+      { path: '*',               element: <NotFound /> },
     ],
   },
 ]);

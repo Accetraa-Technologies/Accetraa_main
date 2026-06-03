@@ -1,0 +1,65 @@
+@use 'abstracts/variables' as *;
+
+.page {
+  padding-bottom: $space-24;
+}
+
+.divider {
+  position: relative;
+  padding: $space-6 $container-padding;
+  background-color: $color-neutral-50;
+  border-top: 1px solid $border-color;
+  border-bottom: 1px solid $border-color;
+}
+
+.dividerLabel {
+  font-size: $font-size-xs;
+  font-weight: $font-weight-semibold;
+  letter-spacing: $tracking-wider;
+  color: $color-neutral-500;
+  text-transform: uppercase;
+}
+
+.block {
+  padding-block: $space-8;
+  display: flex;
+  flex-direction: column;
+  gap: $space-6;
+}
+
+.containerDemo {
+  padding: $space-6;
+  background-color: $color-primary-subtle;
+  border: 2px dashed $color-primary;
+  border-radius: $radius-md;
+  text-align: center;
+  font-size: $font-size-sm;
+  font-weight: $font-weight-semibold;
+  color: $color-primary;
+}
+
+.containerDemoNarrow {
+  background-color: $color-secondary-subtle;
+  border-color: $color-secondary;
+  color: $color-secondary-dark;
+}
+
+.infoBox {
+  padding: $space-6;
+  background-color: $color-neutral-50;
+  border: 1px solid $border-color;
+  border-radius: $radius-lg;
+  font-size: $font-size-sm;
+  color: $color-neutral-700;
+  line-height: $line-height-relaxed;
+
+  p { margin-bottom: $space-3; }
+
+  ul {
+    list-style: disc;
+    padding-left: $space-6;
+    display: flex;
+    flex-direction: column;
+    gap: $space-2;
+  }
+}

@@ -1,10 +1,10 @@
 @use '@/styles/abstracts/variables' as *;
 @use '@/styles/abstracts/mixins' as *;
 
-// ─── Skip Navigation ──────────────────────────────────────────────────────────
+// ─── Skip Link ────────────────────────────────────────────────────────────────
 
 .skipNav {
-  position: absolute;
+  position: fixed;
   top: $space-3;
   left: $space-3;
   z-index: $z-max;
@@ -15,8 +15,7 @@
   font-weight: $font-weight-semibold;
   border-radius: $radius-md;
   text-decoration: none;
-  // Visually hidden until focused by keyboard
-  transform: translateY(-200%);
+  transform: translateY(-180%);
   transition: transform $transition-fast;
 
   &:focus {
@@ -26,76 +25,211 @@
   }
 }
 
+// ─── Mobile Overlay ───────────────────────────────────────────────────────────
+
+.overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background-color: rgba($color-neutral-950, 0.55);
+  z-index: calc(#{$z-modal} - 1);
+  opacity: 0;
+  transition: opacity $transition-base;
+  contain: layout;
+
+  @include respond-below('lg') {
+    display: block;
+    pointer-events: none;
+  }
+}
+
+.overlayVisible {
+  opacity: 1;
+  pointer-events: all;
+}
+
+// ─── Mobile Slide Panel ───────────────────────────────────────────────────────
+
+.mobilePanel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: min(340px, 92vw);
+  background-color: $color-white;
+  z-index: $z-modal;
+  display: flex;
+  flex-direction: column;
+  transform: translateX(100%);
+  transition: transform 320ms $easing-standard;
+  box-shadow: $shadow-2xl;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  // Promote to GPU compositing layer before animation starts to prevent first-open jank
+  will-change: transform;
+  // Contain layout recalculations to this panel; transforms don't trigger page reflow
+  contain: layout;
+
+  @include respond-to('lg') {
+    display: none;
+  }
+}
+
+.mobilePanelOpen {
+  transform: translateX(0);
+}
+
+.mobilePanelHeader {
+  @include flex-between;
+  padding: $space-5 $space-6;
+  border-bottom: 1px solid $border-color;
+  flex-shrink: 0;
+}
+
+.mobileLogo {
+  font-size: $font-size-xl;
+  font-weight: $font-weight-bold;
+  color: $color-primary;
+  letter-spacing: $tracking-tight;
+  text-decoration: none;
+}
+
+.closeBtn {
+  @include flex-center;
+  width: 44px;
+  height: 44px;
+  border-radius: $radius-md;
+  color: $color-neutral-600;
+  transition: background-color $transition-fast, color $transition-fast;
+  flex-shrink: 0;
+
+  &:hover {
+    background-color: $color-neutral-100;
+    color: $color-neutral-900;
+  }
+
+  &:focus-visible {
+    @include focus-ring;
+  }
+}
+
+.mobileNavLinks {
+  flex: 1;
+  padding: $space-4 $space-4;
+  display: flex;
+  flex-direction: column;
+  gap: $space-1;
+}
+
+.mobileNavLink {
+  display: flex;
+  align-items: center;
+  min-height: 52px;
+  padding: $space-3 $space-4;
+  font-size: $font-size-base;
+  font-weight: $font-weight-medium;
+  color: $color-neutral-700;
+  border-radius: $radius-md;
+  text-decoration: none;
+  transition: color $transition-fast, background-color $transition-fast;
+
+  &:hover {
+    color: $color-primary;
+    background-color: $color-primary-subtle;
+  }
+
+  &:focus-visible {
+    @include focus-ring;
+  }
+}
+
+.mobileNavLinkActive {
+  color: $color-primary;
+  font-weight: $font-weight-semibold;
+  background-color: $color-primary-subtle;
+}
+
+.mobileCTA {
+  padding: $space-6;
+  border-top: 1px solid $border-color;
+  flex-shrink: 0;
+}
+
+// ─── Main Header ──────────────────────────────────────────────────────────────
+
 .header {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   height: $navbar-height;
+  // Solid fallback for browsers / devices where backdrop-filter is too expensive
   background-color: $color-white;
   border-bottom: 1px solid $border-color;
   z-index: $z-navbar;
+
+  // Frosted glass only on devices that can handle it efficiently.
+  // Reduced to blur(6px) — half of original — to cut GPU cost significantly
+  // while preserving the visual depth cue.
+  @supports (backdrop-filter: blur(1px)) {
+    background-color: rgba($color-white, 0.92);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+  }
 }
 
 .nav {
   @include container;
   @include flex-between;
   height: 100%;
+  gap: $space-4;
 }
+
+// ─── Logo ─────────────────────────────────────────────────────────────────────
 
 .logo {
   font-size: $font-size-xl;
   font-weight: $font-weight-bold;
   color: $color-primary;
-  letter-spacing: -0.02em;
-}
+  letter-spacing: $tracking-tight;
+  text-decoration: none;
+  flex-shrink: 0;
 
-.navLinks {
-  display: none;
-  flex-direction: column;
-  position: absolute;
-  top: $navbar-height;
-  left: 0;
-  right: 0;
-  background-color: $color-white;
-  border-bottom: 1px solid $border-color;
-  padding: $space-4 $container-padding;
-  gap: $space-1;
-
-  @include respond-to('lg') {
-    display: flex;
-    flex-direction: row;
-    position: static;
-    background: none;
-    border: none;
-    padding: 0;
-    gap: $space-2;
+  &:focus-visible {
+    @include focus-ring;
+    border-radius: $radius-sm;
   }
 }
 
-.navLinksOpen {
-  display: flex;
+// ─── Desktop Nav Links ────────────────────────────────────────────────────────
+
+.desktopLinks {
+  display: none;
+  align-items: center;
+  gap: $space-1;
+  flex: 1;
+  margin-left: $space-6;
+
+  @include respond-to('lg') {
+    display: flex;
+  }
 }
 
 .navLink {
   display: flex;
   align-items: center;
-  min-height: 44px; // WCAG 2.5.5 touch target on mobile
   padding: $space-2 $space-4;
   font-size: $font-size-sm;
   font-weight: $font-weight-medium;
-  color: $color-neutral-700;
+  color: $color-neutral-600;
   border-radius: $radius-md;
+  text-decoration: none;
   transition: color $transition-fast, background-color $transition-fast;
-
-  @include respond-to('lg') {
-    min-height: unset;
-    padding: $space-3 $space-4;
-  }
+  white-space: nowrap;
 
   &:hover {
-    color: $color-primary;
-    background-color: $color-neutral-100;
+    color: $color-neutral-900;
+    background-color: $color-neutral-50;
   }
 
   &:focus-visible {
@@ -106,16 +240,44 @@
 .navLinkActive {
   color: $color-primary;
   font-weight: $font-weight-semibold;
+
+  &:hover {
+    color: $color-primary;
+    background-color: $color-primary-subtle;
+  }
 }
 
+// ─── Desktop CTA ──────────────────────────────────────────────────────────────
+
+.desktopCTA {
+  display: none;
+  flex-shrink: 0;
+
+  @include respond-to('lg') {
+    display: flex;
+  }
+}
+
+// ─── Hamburger ────────────────────────────────────────────────────────────────
+
 .hamburger {
-  display: flex;
+  @include flex-center;
   flex-direction: column;
-  justify-content: center;
   gap: 5px;
   width: 44px;
   height: 44px;
   padding: $space-2;
+  border-radius: $radius-md;
+  flex-shrink: 0;
+  transition: background-color $transition-fast;
+
+  &:hover {
+    background-color: $color-neutral-50;
+  }
+
+  &:focus-visible {
+    @include focus-ring;
+  }
 
   @include respond-to('lg') {
     display: none;
@@ -129,4 +291,9 @@
   background-color: $color-neutral-800;
   border-radius: $radius-full;
   transition: transform $transition-base, opacity $transition-base;
+  transform-origin: center;
 }
+
+.barTop  { transform: translateY(7px) rotate(45deg); }
+.barMid  { opacity: 0; transform: scaleX(0); }
+.barBot  { transform: translateY(-7px) rotate(-45deg); }

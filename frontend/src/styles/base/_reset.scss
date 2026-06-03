@@ -1,5 +1,19 @@
 @use '../abstracts/variables' as *;
 
+// ─── Inter Fallback Font ──────────────────────────────────────────────────────
+// Adjusts Arial's metrics to match Inter exactly, so font-swap causes zero CLS.
+// Values sourced from https://screenspan.net/fallback (Inter → Arial).
+// This @font-face is referenced by $font-primary as 'Inter Fallback'.
+
+@font-face {
+  font-family: 'Inter Fallback';
+  src: local('Arial');
+  ascent-override:   90.20%;
+  descent-override:  22.48%;
+  line-gap-override:  0.00%;
+  size-adjust:       107.40%;
+}
+
 *,
 *::before,
 *::after {

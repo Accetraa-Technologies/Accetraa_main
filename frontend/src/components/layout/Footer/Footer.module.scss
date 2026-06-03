@@ -1,69 +1,175 @@
 @use '@/styles/abstracts/variables' as *;
 @use '@/styles/abstracts/mixins' as *;
 
+// ─── Footer Shell ─────────────────────────────────────────────────────────────
+
 .footer {
-  background-color: $color-neutral-900;
-  color: $color-neutral-200;
-  padding-top: $space-12;
+  background-color: $color-neutral-950;
+  color: $color-neutral-300;
 }
 
-.inner {
-  display: flex;
-  flex-direction: column;
-  gap: $space-8;
-  padding-bottom: $space-10;
-  border-bottom: 1px solid $color-neutral-700;
+// ─── Main Grid ────────────────────────────────────────────────────────────────
 
-  @include respond-to('md') {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
+.main {
+  padding-block: $space-16;
+
+  @include respond-to('lg') {
+    padding-block: $space-20;
   }
 }
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: $space-10;
+
+  @include respond-to('md') {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include respond-to('lg') {
+    grid-template-columns: 1.8fr 1fr 1fr 1.4fr;
+    gap: $space-12;
+  }
+}
+
+// ─── Brand Column ─────────────────────────────────────────────────────────────
 
 .brand {
   display: flex;
   flex-direction: column;
-  gap: $space-2;
+  gap: $space-5;
 }
 
 .logo {
-  font-size: $font-size-xl;
+  display: inline-block;
+  font-size: $font-size-2xl;
   font-weight: $font-weight-bold;
   color: $color-white;
-}
-
-.tagline {
-  font-size: $font-size-sm;
-  color: $color-neutral-400;
-}
-
-.links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: $space-2 $space-6;
-}
-
-.link {
-  font-size: $font-size-sm;
-  color: $color-neutral-400;
+  letter-spacing: $tracking-tight;
+  text-decoration: none;
   transition: color $transition-fast;
 
-  &:hover {
-    color: $color-white;
-  }
+  &:hover { color: $color-primary-light; }
+  &:focus-visible { @include focus-ring($color-primary-light); }
 }
 
+.description {
+  font-size: $font-size-sm;
+  color: $color-neutral-400;
+  line-height: $line-height-relaxed;
+  max-width: 340px;
+  margin: 0;
+}
+
+.social {
+  @include flex-start;
+  gap: $space-2;
+  display: inline-flex;
+  font-size: $font-size-sm;
+  font-weight: $font-weight-medium;
+  color: $color-neutral-400;
+  text-decoration: none;
+  transition: color $transition-fast;
+  width: fit-content;
+
+  &:hover { color: $color-white; }
+  &:focus-visible { @include focus-ring($color-primary-light); }
+}
+
+// ─── Link Columns ─────────────────────────────────────────────────────────────
+
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: $space-5;
+}
+
+.columnTitle {
+  font-size: $font-size-xs;
+  font-weight: $font-weight-semibold;
+  letter-spacing: $tracking-widest;
+  text-transform: uppercase;
+  color: $color-neutral-500;
+  margin: 0;
+}
+
+.linkList {
+  display: flex;
+  flex-direction: column;
+  gap: $space-3;
+}
+
+.footerLink {
+  font-size: $font-size-sm;
+  color: $color-neutral-400;
+  text-decoration: none;
+  transition: color $transition-fast;
+  display: inline-block;
+
+  &:hover { color: $color-white; }
+  &:focus-visible { @include focus-ring($color-primary-light); }
+}
+
+// ─── Contact Column ───────────────────────────────────────────────────────────
+
+.contactList {
+  display: flex;
+  flex-direction: column;
+  gap: $space-4;
+}
+
+.contactItem {
+  @include flex-start;
+  gap: $space-3;
+  font-size: $font-size-sm;
+  color: $color-neutral-400;
+  text-decoration: none;
+  transition: color $transition-fast;
+  line-height: $line-height-snug;
+
+  svg { flex-shrink: 0; margin-top: 1px; }
+
+  &:is(a):hover { color: $color-white; }
+  &:is(a):focus-visible { @include focus-ring($color-primary-light); }
+}
+
+// ─── Bottom Bar ───────────────────────────────────────────────────────────────
+
 .bottom {
-  padding-block: $space-5;
+  border-top: 1px solid $color-neutral-800;
+  padding-block: $space-6;
+}
+
+.bottomInner {
+  @include flex-between;
+  flex-direction: column;
+  gap: $space-3;
+  text-align: center;
+
+  @include respond-to('md') {
+    flex-direction: row;
+    text-align: left;
+  }
 }
 
 .copy {
   font-size: $font-size-xs;
-  color: $color-neutral-400;
-  text-align: center;
+  color: $color-neutral-500;
+  margin: 0;
+}
 
-  @include respond-to('md') {
-    text-align: left;
-  }
+.legalLinks {
+  display: flex;
+  gap: $space-5;
+}
+
+.legalLink {
+  font-size: $font-size-xs;
+  color: $color-neutral-500;
+  text-decoration: none;
+  transition: color $transition-fast;
+
+  &:hover { color: $color-neutral-300; }
+  &:focus-visible { @include focus-ring($color-primary-light); }
 }
