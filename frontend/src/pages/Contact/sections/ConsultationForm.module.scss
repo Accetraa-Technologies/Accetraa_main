@@ -129,3 +129,50 @@
   max-width: 400px;
   margin: 0;
 }
+
+// ─── Staging notice ───────────────────────────────────────────────────────────
+
+.stagingNotice {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $space-5;
+  padding: $space-12 $space-8;
+  text-align: center;
+}
+
+.stagingIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  background: $color-secondary-subtle;
+  border-radius: $radius-xl;
+  color: $color-secondary;
+}
+
+.stagingTitle {
+  font-size: $font-size-xl;
+  font-weight: $font-weight-semibold;
+  color: $color-neutral-900;
+  letter-spacing: $tracking-tight;
+  margin: 0;
+}
+
+.stagingBody {
+  font-size: $font-size-base;
+  color: $color-neutral-500;
+  line-height: $line-height-relaxed;
+  max-width: 400px;
+  margin: 0;
+}
+
+.stagingLink {
+  color: $color-secondary;
+  font-weight: $font-weight-semibold;
+  text-decoration: none;
+
+  &:hover { text-decoration: underline; }
+  &:focus-visible { @include focus-ring($color-secondary); border-radius: $radius-sm; }
+}

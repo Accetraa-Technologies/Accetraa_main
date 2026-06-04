@@ -4,7 +4,38 @@ import { submitContact } from '@/services/forms';
 import FormField from '@/components/ui/FormField';
 import Button from '@/components/ui/Button';
 import { FOOTER_CONTACT } from '@/utils/constants';
+import { config } from '@/config/env';
 import styles from './ContactMain.module.scss';
+
+// ─── Staging notice (replaces form when VITE_STAGING_MODE=true) ───────────────
+// All form code below remains intact for production activation.
+const StagingNotice = () => (
+  <div className={styles.stagingNotice}>
+    <div className={styles.stagingIcon} aria-hidden="true"><StagingInfoIcon /></div>
+    <h3 className={styles.stagingTitle}>Online forms temporarily unavailable</h3>
+    <p className={styles.stagingBody}>
+      This site is currently in internal review. To reach us, please email{' '}
+      <a href={`mailto:${FOOTER_CONTACT.email}`} className={styles.stagingLink}>
+        {FOOTER_CONTACT.email}
+      </a>
+      {' '}or call{' '}
+      <a href={`tel:${FOOTER_CONTACT.phone.replace(/\s/g, '')}`} className={styles.stagingLink}>
+        {FOOTER_CONTACT.phone}
+      </a>
+      . We respond within one business day.
+    </p>
+  </div>
+);
+
+function StagingInfoIcon() {
+  return (
+    <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+      <circle cx="14" cy="14" r="11" stroke="currentColor" strokeWidth="1.75"/>
+      <path d="M14 12v7" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+      <circle cx="14" cy="8.5" r="1.25" fill="currentColor"/>
+    </svg>
+  );
+}
 
 // ─── Validation ───────────────────────────────────────────────────────────────
 
@@ -61,6 +92,8 @@ const INFO_CARDS = [
 // ─── Contact form ─────────────────────────────────────────────────────────────
 
 const ContactForm = () => {
+  if (config.stagingMode) return <StagingNotice />;
+
   const { values, errors, submitting, handleChange, handleSubmit, reset } = useForm(INITIAL, validate);
   const [serverFieldErrors, setServerFieldErrors] = useState({});
   const [serverError, setServerError]             = useState('');

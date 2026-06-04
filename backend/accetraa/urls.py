@@ -5,6 +5,13 @@ Phase 1 — Active endpoints:
   /admin/               → Django Admin Panel (session auth — always active)
   /api/v1/health/       → Health check (public)
   /api/v1/services/     → Public: list active services
+  /api/v1/products/     → Public: list active products
+  /api/v1/portfolio/    → Public: list portfolio items
+
+Submission endpoints (contact / consultation / demo-requests):
+  Enabled by default.
+  Disabled when STAGING_MODE=True in settings (staging deployment only).
+  Set STAGING_MODE=False (or remove it) to re-enable for production.
 
 Phase 2 — Reserved (NOT active in Phase 1):
   /api/v1/admin/auth/token/            → JWT obtain       (React Admin Panel)
@@ -38,7 +45,7 @@ urlpatterns = [
     path('api/v1/health/', HealthCheckView.as_view(), name='health-check'),
 
     # =========================================================================
-    # PHASE 1 — PUBLIC API ENDPOINTS
+    # PHASE 1 — PUBLIC READ ENDPOINTS (always active)
     # =========================================================================
 
     # Module 1: Services
@@ -49,40 +56,49 @@ urlpatterns = [
 
     # Module 3: Portfolio
     path('api/v1/', include('apps.portfolio.urls')),
-
-    # Module 4: Contact
-    path('api/v1/', include('apps.contact.urls')),
-
-    # Module 5: Consultation
-    path('api/v1/', include('apps.consultation.urls')),
-
-    # Module 6: Demo Requests
-    path('api/v1/', include('apps.demo_requests.urls')),
-
-    # =========================================================================
-    # PHASE 2 — RESERVED: React Admin Panel (JWT-protected Admin CRUD API)
-    # =========================================================================
-    # To activate Phase 2 admin API:
-    #   1. pip install djangorestframework-simplejwt==5.3.1
-    #   2. Uncomment 'rest_framework_simplejwt' in settings/base.py THIRD_PARTY_APPS
-    #   3. Uncomment SIMPLE_JWT block in settings/base.py
-    #   4. Uncomment the imports and URL patterns below
-    #
-    # from rest_framework_simplejwt.views import (
-    #     TokenObtainPairView, TokenRefreshView, TokenVerifyView,
-    # )
-    #
-    # path('api/v1/admin/auth/token/',         TokenObtainPairView.as_view(), name='token_obtain_pair'),
-    # path('api/v1/admin/auth/token/refresh/', TokenRefreshView.as_view(),    name='token_refresh'),
-    # path('api/v1/admin/auth/token/verify/',  TokenVerifyView.as_view(),     name='token_verify'),
-    # path('api/v1/admin/services/',           include('apps.services.admin_urls')),
-    # path('api/v1/admin/products/',           include('apps.products.admin_urls')),
-    # path('api/v1/admin/portfolio/',          include('apps.portfolio.admin_urls')),
-    # path('api/v1/admin/contact/',            include('apps.contact.admin_urls')),
-    # path('api/v1/admin/consultation/',       include('apps.consultation.admin_urls')),
-    # path('api/v1/admin/demo-requests/',      include('apps.demo_requests.admin_urls')),
-    # =========================================================================
 ]
+
+# ── Submission endpoints — gated by STAGING_MODE ──────────────────────────────
+# Active in development (STAGING_MODE not set) and production (STAGING_MODE=False).
+# Disabled on staging (STAGING_MODE=True) — forms replaced with static notices.
+# To re-enable: remove STAGING_MODE from environment or set it to False.
+if not getattr(settings, 'STAGING_MODE', False):
+    urlpatterns += [
+        # Module 4: Contact
+        path('api/v1/', include('apps.contact.urls')),
+
+        # Module 5: Consultation
+        path('api/v1/', include('apps.consultation.urls')),
+
+        # Module 6: Demo Requests
+        path('api/v1/', include('apps.demo_requests.urls')),
+    ]
+
+# =========================================================================
+# PHASE 2 — RESERVED: React Admin Panel (JWT-protected Admin CRUD API)
+# =========================================================================
+# To activate Phase 2 admin API:
+#   1. pip install djangorestframework-simplejwt==5.3.1
+#   2. Uncomment 'rest_framework_simplejwt' in settings/base.py THIRD_PARTY_APPS
+#   3. Uncomment SIMPLE_JWT block in settings/base.py
+#   4. Uncomment the imports and URL patterns below
+#
+# from rest_framework_simplejwt.views import (
+#     TokenObtainPairView, TokenRefreshView, TokenVerifyView,
+# )
+#
+# urlpatterns += [
+#     path('api/v1/admin/auth/token/',         TokenObtainPairView.as_view(), name='token_obtain_pair'),
+#     path('api/v1/admin/auth/token/refresh/', TokenRefreshView.as_view(),    name='token_refresh'),
+#     path('api/v1/admin/auth/token/verify/',  TokenVerifyView.as_view(),     name='token_verify'),
+#     path('api/v1/admin/services/',           include('apps.services.admin_urls')),
+#     path('api/v1/admin/products/',           include('apps.products.admin_urls')),
+#     path('api/v1/admin/portfolio/',          include('apps.portfolio.admin_urls')),
+#     path('api/v1/admin/contact/',            include('apps.contact.admin_urls')),
+#     path('api/v1/admin/consultation/',       include('apps.consultation.admin_urls')),
+#     path('api/v1/admin/demo-requests/',      include('apps.demo_requests.admin_urls')),
+# ]
+# =========================================================================
 
 # Serve media files via Django dev server in development.
 # In production, media is served from S3 via CloudFront.

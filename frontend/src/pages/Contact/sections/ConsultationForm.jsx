@@ -3,7 +3,34 @@ import useForm from '@/hooks/useForm';
 import { submitConsultation } from '@/services/forms';
 import FormField from '@/components/ui/FormField';
 import Button from '@/components/ui/Button';
+import { config } from '@/config/env';
 import styles from './ConsultationForm.module.scss';
+
+// ─── Staging notice (replaces form when VITE_STAGING_MODE=true) ───────────────
+const StagingNotice = () => (
+  <div className={styles.stagingNotice}>
+    <div className={styles.stagingIcon} aria-hidden="true"><StagingInfoIcon /></div>
+    <h3 className={styles.stagingTitle}>Consultation booking temporarily unavailable</h3>
+    <p className={styles.stagingBody}>
+      This site is currently in internal review. To request a consultation, please email{' '}
+      <a href="mailto:contact@accetraa.com" className={styles.stagingLink}>
+        contact@accetraa.com
+      </a>
+      {' '}with the subject line <strong>"Consultation Request"</strong>.
+      We will respond within one business day.
+    </p>
+  </div>
+);
+
+function StagingInfoIcon() {
+  return (
+    <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+      <circle cx="14" cy="14" r="11" stroke="currentColor" strokeWidth="1.75"/>
+      <path d="M14 12v7" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+      <circle cx="14" cy="8.5" r="1.25" fill="currentColor"/>
+    </svg>
+  );
+}
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -38,6 +65,8 @@ const INITIAL = {
 };
 
 const ConsultationFormFields = () => {
+  if (config.stagingMode) return <StagingNotice />;
+
   const { values, errors, submitting, handleChange, handleSubmit, reset } = useForm(INITIAL, validate);
   const [serverFieldErrors, setServerFieldErrors] = useState({});
   const [serverError, setServerError]             = useState('');
