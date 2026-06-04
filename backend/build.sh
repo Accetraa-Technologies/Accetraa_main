@@ -14,4 +14,9 @@ python manage.py collectstatic --no-input
 echo "--- Running database migrations ---"
 python manage.py migrate --run-syncdb
 
+echo "--- Creating superuser ---"
+python manage.py createsuperuser \
+  --noinput \
+  --settings=accetraa.settings.staging || true
+
 echo "--- Build complete ---"
