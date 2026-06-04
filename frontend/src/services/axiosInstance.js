@@ -26,14 +26,29 @@ axiosInstance.interceptors.response.use(
       );
     }
 
+    const responseData = error.response.data;
+
     const message =
-      error.response.data?.message  ||
-      error.response.data?.detail   ||
-      error.response.data?.error    ||
-      error.message                 ||
+      responseData?.message  ||
+      responseData?.detail   ||
+      responseData?.error    ||
+      error.message          ||
       'An unexpected error occurred.';
 
-    return Promise.reject(new Error(message));
+    const err = new Error(message);
+
+    // Attach raw DRF field-level validation errors so form components can map
+    // them back to individual fields (e.g. { full_name: ['...'], email: ['...'] }).
+    if (
+      error.response.status === 400 &&
+      responseData &&
+      typeof responseData === 'object' &&
+      !Array.isArray(responseData)
+    ) {
+      err.fieldErrors = responseData;
+    }
+
+    return Promise.reject(err);
   }
 );
 

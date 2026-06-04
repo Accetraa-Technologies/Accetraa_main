@@ -11,6 +11,6 @@ export const submitConsultation = async (payload) => {
 };
 
 export const submitDemo = async (payload) => {
-  const response = await axiosInstance.post('/api/v1/demo/', payload);
+  const response = await axiosInstance.post('/api/v1/demo-requests/', payload);
   return response.data;
 };
