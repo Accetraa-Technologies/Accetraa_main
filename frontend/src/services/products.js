@@ -1,4 +1,4 @@
-import { PRODUCTS_DATA } from '@/data/products.data';
+import { products } from '@/data/products';
 
 // Dummy data active — backend integration preserved below for future use.
 // TO GO LIVE: delete the two lines above, uncomment the block below.
@@ -9,4 +9,4 @@ import { PRODUCTS_DATA } from '@/data/products.data';
 //   return response.data;
 // };
 
-export const getProducts = () => Promise.resolve(PRODUCTS_DATA);
+export const getProducts = () => Promise.resolve(products);

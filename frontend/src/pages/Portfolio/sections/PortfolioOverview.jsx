@@ -1,24 +1,6 @@
 import SectionHeader from '@/components/shared/SectionHeader';
+import { portfolioCapabilities } from '@/data/portfolio';
 import styles from './PortfolioOverview.module.scss';
-
-const CAPABILITIES = [
-  {
-    title: 'Product Development',
-    body: 'We build enterprise-grade software products — from zero to production-ready. Every product is designed to scale and maintained to last.',
-  },
-  {
-    title: 'Custom Software Delivery',
-    body: 'Bespoke solutions engineered to your exact requirements. No off-the-shelf compromise — systems that fit your processes, not the other way around.',
-  },
-  {
-    title: 'Enterprise Solutions',
-    body: 'Large-scale platforms serving thousands of users across complex organisational structures. Security, compliance, and performance built in by default.',
-  },
-  {
-    title: 'Industry-Focused Innovation',
-    body: 'Deep vertical expertise allows us to move faster and make better decisions. We arrive with domain knowledge, not just technical skills.',
-  },
-];
 
 const PortfolioOverview = () => (
   <section className={styles.section} aria-label="Portfolio overview">
@@ -34,7 +16,7 @@ const PortfolioOverview = () => (
         </div>
 
         <div className={styles.right}>
-          {CAPABILITIES.map(({ title, body }) => (
+          {portfolioCapabilities.map(({ title, body }) => (
             <div key={title} className={styles.capability}>
               <div className={styles.dot} aria-hidden="true" />
               <div>

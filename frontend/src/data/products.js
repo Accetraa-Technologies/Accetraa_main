@@ -1,11 +1,8 @@
-// Dummy data — mirrors GET /api/v1/products/ API response shape (ProductSerializer).
-// `badge`, `features`, and `url` are frontend-only fields not returned by the backend API.
+// Shape mirrors GET /api/v1/products/ (ProductSerializer).
+// `badge`, `features`, and `url` are frontend-only fields.
 // `thumbnail_url` is null until media is uploaded via Django admin.
-//
-// TO SWITCH TO LIVE API: remove this file's usage from services/products.js and
-// uncomment the axiosInstance call there.
 
-export const PRODUCTS_DATA = [
+export const products = [
   {
     id: 1,
     name: 'UrSaloon',
@@ -16,7 +13,6 @@ export const PRODUCTS_DATA = [
     thumbnail_url: null,
     is_featured: true,
     sort_order: 1,
-    // Frontend-only — not returned by backend API today
     badge: 'Live',
     features: [
       'Online booking & appointment management',

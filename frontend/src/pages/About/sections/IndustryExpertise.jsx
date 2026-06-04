@@ -1,4 +1,5 @@
 import SectionHeader from '@/components/shared/SectionHeader';
+import { industryExpertise } from '@/data/industries';
 import styles from './IndustryExpertise.module.scss';
 
 const FinanceIcon = () => (
@@ -49,38 +50,14 @@ const TechnologyIcon = () => (
   </svg>
 );
 
-const INDUSTRIES = [
-  {
-    icon: <FinanceIcon />,
-    name: 'Financial Services',
-    description: 'Core banking platforms, payment processing, regulatory compliance systems, and fraud detection solutions for banks and FinTech firms.',
-  },
-  {
-    icon: <HealthcareIcon />,
-    name: 'Healthcare & Life Sciences',
-    description: 'Patient management systems, clinical data platforms, HIPAA-compliant applications, and digital health solutions for providers and payers.',
-  },
-  {
-    icon: <ManufacturingIcon />,
-    name: 'Manufacturing & Logistics',
-    description: 'Supply chain visibility platforms, ERP integrations, IoT-driven factory automation, and warehouse management systems.',
-  },
-  {
-    icon: <EducationIcon />,
-    name: 'Education Technology',
-    description: 'Learning management systems, adaptive content platforms, student analytics tools, and institution-wide digital transformation programmes.',
-  },
-  {
-    icon: <RetailIcon />,
-    name: 'Retail & E-Commerce',
-    description: 'Omnichannel commerce platforms, inventory management systems, personalisation engines, and enterprise POS integrations.',
-  },
-  {
-    icon: <TechnologyIcon />,
-    name: 'Technology & SaaS',
-    description: 'Scalable multi-tenant SaaS architectures, developer tooling, API platforms, and cloud-native product engineering for technology companies.',
-  },
-];
+const ICON_MAP = {
+  finance:       <FinanceIcon />,
+  healthcare:    <HealthcareIcon />,
+  manufacturing: <ManufacturingIcon />,
+  education:     <EducationIcon />,
+  retail:        <RetailIcon />,
+  technology:    <TechnologyIcon />,
+};
 
 const IndustryExpertise = () => (
   <section className={styles.section} aria-label="Industry expertise">
@@ -94,9 +71,9 @@ const IndustryExpertise = () => (
       />
 
       <div className={styles.grid}>
-        {INDUSTRIES.map(({ icon, name, description }) => (
+        {industryExpertise.map(({ iconKey, name, description }) => (
           <div key={name} className={styles.card}>
-            <div className={styles.iconWrap} aria-hidden="true">{icon}</div>
+            <div className={styles.iconWrap} aria-hidden="true">{ICON_MAP[iconKey]}</div>
             <div className={styles.cardContent}>
               <h3 className={styles.name}>{name}</h3>
               <p className={styles.description}>{description}</p>

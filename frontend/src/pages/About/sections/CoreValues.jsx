@@ -1,4 +1,5 @@
 import SectionHeader from '@/components/shared/SectionHeader';
+import { coreValues } from '@/data/company';
 import styles from './CoreValues.module.scss';
 
 const InnovationIcon = () => (
@@ -45,38 +46,14 @@ const SecurityIcon = () => (
   </svg>
 );
 
-const VALUES = [
-  {
-    icon: <InnovationIcon />,
-    title: 'Innovation',
-    body: 'We continuously invest in emerging technologies and modern engineering practices to ensure our clients benefit from the best of what technology has to offer.',
-  },
-  {
-    icon: <IntegrityIcon />,
-    title: 'Integrity',
-    body: 'We operate with transparency and honesty at every stage. Our clients receive accurate progress reports, honest timelines, and candid technical assessments.',
-  },
-  {
-    icon: <ClientSuccessIcon />,
-    title: 'Client Success',
-    body: 'Every decision we make is evaluated through the lens of client outcomes. We are not successful unless our clients are. Their growth is our benchmark.',
-  },
-  {
-    icon: <CollaborationIcon />,
-    title: 'Collaboration',
-    body: 'Great software is built by teams that communicate clearly and respect each other\'s expertise. We embed ourselves in our clients\' organisations as genuine partners.',
-  },
-  {
-    icon: <QualityIcon />,
-    title: 'Quality',
-    body: 'We do not ship code that we are not proud of. Rigorous code reviews, automated testing, and architectural discipline are non-negotiable standards in every engagement.',
-  },
-  {
-    icon: <SecurityIcon />,
-    title: 'Security',
-    body: 'Security is not an afterthought — it is designed into every system we build. We apply industry best practices and continuous threat modelling across all deliverables.',
-  },
-];
+const ICON_MAP = {
+  innovation:    <InnovationIcon />,
+  integrity:     <IntegrityIcon />,
+  clientSuccess: <ClientSuccessIcon />,
+  collaboration: <CollaborationIcon />,
+  quality:       <QualityIcon />,
+  security:      <SecurityIcon />,
+};
 
 const CoreValues = () => (
   <section className={styles.section} aria-label="Core values">
@@ -90,9 +67,9 @@ const CoreValues = () => (
       />
 
       <div className={styles.grid} role="list">
-        {VALUES.map(({ icon, title, body }) => (
+        {coreValues.map(({ iconKey, title, body }) => (
           <div key={title} className={styles.card} role="listitem">
-            <div className={styles.iconWrap} aria-hidden="true">{icon}</div>
+            <div className={styles.iconWrap} aria-hidden="true">{ICON_MAP[iconKey]}</div>
             <h3 className={styles.title}>{title}</h3>
             <p className={styles.body}>{body}</p>
           </div>

@@ -1,4 +1,5 @@
 import SectionHeader from '@/components/shared/SectionHeader';
+import { serviceDifferentiators } from '@/data/services';
 import styles from './WhyOurServices.module.scss';
 
 const TeamIcon = () => (
@@ -48,38 +49,14 @@ const TransparencyIcon = () => (
   </svg>
 );
 
-const DIFFERENTIATORS = [
-  {
-    Icon: TeamIcon,
-    title: 'Senior-Only Engineering',
-    body: 'Every engagement is staffed exclusively with senior engineers. No juniors learning on your project, no hidden ramp-up time.',
-  },
-  {
-    Icon: AgileIcon,
-    title: 'Agile Without the Theatre',
-    body: 'We practise genuine agile delivery — tight feedback loops, working software every sprint, and backlog discipline that keeps projects on track.',
-  },
-  {
-    Icon: SecurityIcon,
-    title: 'Security by Design',
-    body: 'Security is built into every architecture decision, code review, and deployment pipeline. Not added at the end as an afterthought.',
-  },
-  {
-    Icon: ScaleIcon,
-    title: 'Built to Scale',
-    body: 'Every system we design accommodates your next phase of growth. Performance testing, capacity planning, and elastic architecture are standard.',
-  },
-  {
-    Icon: SupportIcon,
-    title: 'Dedicated Post-Launch Support',
-    body: 'We do not disappear after go-live. Dedicated support teams, SLA commitments, and proactive monitoring are included in every engagement.',
-  },
-  {
-    Icon: TransparencyIcon,
-    title: 'Full Transparency',
-    body: 'Weekly progress reports, open access to delivery metrics, honest risk escalation. You always know exactly where your project stands.',
-  },
-];
+const ICON_MAP = {
+  team:         <TeamIcon />,
+  agile:        <AgileIcon />,
+  security:     <SecurityIcon />,
+  scale:        <ScaleIcon />,
+  support:      <SupportIcon />,
+  transparency: <TransparencyIcon />,
+};
 
 const WhyOurServices = () => (
   <section className={styles.section} aria-label="Why choose our services">
@@ -93,9 +70,9 @@ const WhyOurServices = () => (
       />
 
       <div className={styles.grid}>
-        {DIFFERENTIATORS.map(({ Icon, title, body }) => (
+        {serviceDifferentiators.map(({ iconKey, title, body }) => (
           <div key={title} className={styles.card}>
-            <div className={styles.iconWrap} aria-hidden="true"><Icon /></div>
+            <div className={styles.iconWrap} aria-hidden="true">{ICON_MAP[iconKey]}</div>
             <h3 className={styles.title}>{title}</h3>
             <p className={styles.body}>{body}</p>
           </div>

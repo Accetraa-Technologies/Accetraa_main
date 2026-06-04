@@ -1,4 +1,5 @@
 import SectionHeader from '@/components/shared/SectionHeader';
+import { industriesServed } from '@/data/industries';
 import styles from './IndustriesServed.module.scss';
 
 const FinanceIcon = () => (
@@ -65,16 +66,16 @@ const LogisticsIcon = () => (
   </svg>
 );
 
-const INDUSTRIES = [
-  { Icon: FinanceIcon,       name: 'Financial Services',         description: 'Banking, FinTech, insurance, and payment platforms' },
-  { Icon: HealthcareIcon,    name: 'Healthcare & Life Sciences', description: 'Clinical systems, patient platforms, and health-tech' },
-  { Icon: ManufacturingIcon, name: 'Manufacturing',              description: 'Factory automation, ERP, and production systems' },
-  { Icon: RetailIcon,        name: 'Retail & E-Commerce',        description: 'Omnichannel platforms and commerce infrastructure' },
-  { Icon: EducationIcon,     name: 'Education Technology',       description: 'LMS, adaptive learning, and student analytics' },
-  { Icon: TechIcon,          name: 'Technology & SaaS',          description: 'Product engineering and platform development' },
-  { Icon: GovtIcon,          name: 'Government & Public Sector', description: 'Citizen-facing platforms and back-office systems' },
-  { Icon: LogisticsIcon,     name: 'Logistics & Supply Chain',   description: 'Tracking, routing, and warehouse systems' },
-];
+const ICON_MAP = {
+  finance:       <FinanceIcon />,
+  healthcare:    <HealthcareIcon />,
+  manufacturing: <ManufacturingIcon />,
+  retail:        <RetailIcon />,
+  education:     <EducationIcon />,
+  technology:    <TechIcon />,
+  government:    <GovtIcon />,
+  logistics:     <LogisticsIcon />,
+};
 
 const IndustriesServed = () => (
   <section className={styles.section} aria-label="Industries we serve">
@@ -88,9 +89,9 @@ const IndustriesServed = () => (
       />
 
       <div className={styles.grid}>
-        {INDUSTRIES.map(({ Icon, name, description }) => (
+        {industriesServed.map(({ iconKey, name, description }) => (
           <div key={name} className={styles.card}>
-            <div className={styles.iconWrap} aria-hidden="true"><Icon /></div>
+            <div className={styles.iconWrap} aria-hidden="true">{ICON_MAP[iconKey]}</div>
             <div className={styles.cardContent}>
               <h3 className={styles.name}>{name}</h3>
               <p className={styles.description}>{description}</p>

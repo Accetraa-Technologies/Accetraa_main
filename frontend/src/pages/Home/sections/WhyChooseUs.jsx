@@ -1,4 +1,5 @@
 import SectionHeader from '@/components/shared/SectionHeader';
+import { homeBenefits } from '@/data/company';
 import styles from './WhyChooseUs.module.scss';
 
 const BriefcaseIcon = () => (
@@ -33,28 +34,12 @@ const ShieldIcon = () => (
   </svg>
 );
 
-const BENEFITS = [
-  {
-    Icon: BriefcaseIcon,
-    title: 'Industry Expertise',
-    body: 'Deep domain knowledge across FinTech, HealthTech, Logistics, and SaaS. We understand your sector before writing the first line of code.',
-  },
-  {
-    Icon: LayersIcon,
-    title: 'Scalable Architecture',
-    body: 'Every system we build is designed for 10x growth from the start — distributed, observable, and cloud-native by default.',
-  },
-  {
-    Icon: HeadsetIcon,
-    title: 'Dedicated Engagement',
-    body: 'Transparent communication, fixed points of contact, and weekly progress reviews. No black boxes, no surprises.',
-  },
-  {
-    Icon: ShieldIcon,
-    title: 'Security by Default',
-    body: 'Enterprise-grade security practices — OWASP compliance, threat modelling, and security reviews — are built into every delivery.',
-  },
-];
+const ICON_MAP = {
+  industry:     <BriefcaseIcon />,
+  architecture: <LayersIcon />,
+  engagement:   <HeadsetIcon />,
+  security:     <ShieldIcon />,
+};
 
 const WhyChooseUs = () => (
   <section className={styles.section} aria-label="Why choose Accetraa">
@@ -68,10 +53,10 @@ const WhyChooseUs = () => (
       />
 
       <div className={styles.grid}>
-        {BENEFITS.map(({ Icon, title, body }) => (
+        {homeBenefits.map(({ iconKey, title, body }) => (
           <div key={title} className={styles.card}>
             <div className={styles.iconWrap}>
-              <Icon />
+              {ICON_MAP[iconKey]}
             </div>
             <h3 className={styles.cardTitle}>{title}</h3>
             <p className={styles.cardBody}>{body}</p>

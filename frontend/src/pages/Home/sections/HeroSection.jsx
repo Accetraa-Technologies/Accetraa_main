@@ -1,14 +1,8 @@
 import { Link } from 'react-router-dom';
 import Button from '@/components/ui/Button';
 import { ROUTES } from '@/utils/constants';
+import { heroStats } from '@/data/company';
 import styles from './HeroSection.module.scss';
-
-const STATS = [
-  { value: '50+',  label: 'Projects Delivered' },
-  { value: '30+',  label: 'Clients Served' },
-  { value: '8+',   label: 'Industries' },
-  { value: '5+',   label: 'Years Experience' },
-];
 
 // Abstract dashboard mockup — pure CSS/JSX, no images
 const HeroVisual = () => (
@@ -91,7 +85,7 @@ const HeroSection = () => (
     <div className={styles.statsWrap}>
       <div className="container">
         <dl className={styles.statsGrid}>
-          {STATS.map(({ value, label }) => (
+          {heroStats.map(({ value, label }) => (
             <div key={label} className={styles.stat}>
               <dt className={styles.statValue}>{value}</dt>
               <dd className={styles.statLabel}>{label}</dd>

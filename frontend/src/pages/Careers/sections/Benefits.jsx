@@ -1,4 +1,5 @@
 import SectionHeader from '@/components/shared/SectionHeader';
+import { employeeBenefits } from '@/data/careers';
 import styles from './Benefits.module.scss';
 
 const RemoteIcon = () => (
@@ -49,38 +50,14 @@ const HealthIcon = () => (
   </svg>
 );
 
-const BENEFITS = [
-  {
-    Icon: RemoteIcon,
-    title: 'Remote Opportunities',
-    body: 'All roles are remote-capable. We care about the quality of your work, not your postcode. Coordinate around outcomes, not office hours.',
-  },
-  {
-    Icon: DevIcon,
-    title: 'Skill Development',
-    body: 'Annual learning budget for courses, certifications, and technical books. We sponsor conference attendance and give you time to develop your expertise.',
-  },
-  {
-    Icon: MentorIcon,
-    title: 'Senior Mentorship',
-    body: 'Every team member is paired with a senior engineer for structured mentorship. Grow faster in six months here than in two years at a conventional company.',
-  },
-  {
-    Icon: ClockIcon,
-    title: 'Flexible Hours',
-    body: 'Core collaboration hours with flexibility around them. We trust you to manage your time and deliver high-quality work consistently.',
-  },
-  {
-    Icon: ConferenceIcon,
-    title: 'Conference Access',
-    body: 'Sponsored attendance at industry conferences, meetups, and workshops. We encourage our engineers to stay connected to the wider technology community.',
-  },
-  {
-    Icon: HealthIcon,
-    title: 'Health & Wellbeing',
-    body: 'Comprehensive health coverage and a culture that takes burnout seriously. Sustainable pace, reasonable expectations, genuine work-life balance.',
-  },
-];
+const ICON_MAP = {
+  remote:     <RemoteIcon />,
+  dev:        <DevIcon />,
+  mentor:     <MentorIcon />,
+  clock:      <ClockIcon />,
+  conference: <ConferenceIcon />,
+  health:     <HealthIcon />,
+};
 
 const Benefits = () => (
   <section className={styles.section} aria-label="Employee benefits">
@@ -95,9 +72,9 @@ const Benefits = () => (
       />
 
       <div className={styles.grid}>
-        {BENEFITS.map(({ Icon, title, body }) => (
+        {employeeBenefits.map(({ iconKey, title, body }) => (
           <div key={title} className={styles.card}>
-            <div className={styles.iconWrap} aria-hidden="true"><Icon /></div>
+            <div className={styles.iconWrap} aria-hidden="true">{ICON_MAP[iconKey]}</div>
             <div className={styles.cardContent}>
               <h3 className={styles.title}>{title}</h3>
               <p className={styles.body}>{body}</p>

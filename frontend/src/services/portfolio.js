@@ -1,4 +1,4 @@
-import { PORTFOLIO_ITEMS, PORTFOLIO_CATEGORIES } from '@/data/portfolio.data';
+import { portfolioItems, portfolioCategories } from '@/data/portfolio';
 
 // Dummy data active — backend integration preserved below for future use.
 // TO GO LIVE: delete the four lines above, uncomment the block below.
@@ -16,11 +16,11 @@ import { PORTFOLIO_ITEMS, PORTFOLIO_CATEGORIES } from '@/data/portfolio.data';
 
 export const getPortfolio = ({ featured } = {}) => {
   const items = featured
-    ? PORTFOLIO_ITEMS.filter((item) => item.is_featured)
-    : PORTFOLIO_ITEMS;
+    ? portfolioItems.filter((item) => item.is_featured)
+    : portfolioItems;
   return Promise.resolve(items);
 };
 
 export const getPortfolioFeatured = () => getPortfolio({ featured: true });
 
-export const getPortfolioCategories = () => Promise.resolve(PORTFOLIO_CATEGORIES);
+export const getPortfolioCategories = () => Promise.resolve(portfolioCategories);

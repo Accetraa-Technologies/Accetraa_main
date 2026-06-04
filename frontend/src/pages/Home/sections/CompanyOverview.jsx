@@ -1,30 +1,6 @@
 import SectionHeader from '@/components/shared/SectionHeader';
+import { companyMetrics, companyDifferentiators } from '@/data/company';
 import styles from './CompanyOverview.module.scss';
-
-const METRICS = [
-  { value: '50+',  label: 'Projects Delivered' },
-  { value: '30+',  label: 'Enterprise Clients' },
-  { value: '8+',   label: 'Industries Served' },
-  { value: '5+',   label: 'Years of Excellence' },
-];
-
-const DIFFERENTIATORS = [
-  {
-    number: '01',
-    title: 'We Build, Not Just Advise',
-    body: 'Our engineers ship production code. Every engagement ends with working software, not a slide deck.',
-  },
-  {
-    number: '02',
-    title: 'Enterprise Architecture from Day One',
-    body: 'Systems designed to handle 10x growth — security, scalability, and observability built in from the start.',
-  },
-  {
-    number: '03',
-    title: 'End-to-End Accountability',
-    body: 'One partner from discovery through to production. No handoff chaos, no accountability gaps.',
-  },
-];
 
 const CompanyOverview = () => (
   <section className={styles.section} aria-label="About Accetraa">
@@ -42,7 +18,7 @@ const CompanyOverview = () => (
 
       {/* Metrics */}
       <dl className={styles.metrics}>
-        {METRICS.map(({ value, label }) => (
+        {companyMetrics.map(({ value, label }) => (
           <div key={label} className={styles.metric}>
             <dt className={styles.metricValue}>{value}</dt>
             <dd className={styles.metricLabel}>{label}</dd>
@@ -52,7 +28,7 @@ const CompanyOverview = () => (
 
       {/* Differentiators */}
       <div className={styles.differentiators}>
-        {DIFFERENTIATORS.map(({ number, title, body }) => (
+        {companyDifferentiators.map(({ number, title, body }) => (
           <div key={number} className={styles.diff}>
             <span className={styles.diffNumber}>{number}</span>
             <div className={styles.diffContent}>

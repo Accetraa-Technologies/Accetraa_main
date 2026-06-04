@@ -1,4 +1,4 @@
-import { SERVICES_DATA } from '@/data/services.data';
+import { services } from '@/data/services';
 
 // Dummy data active — backend integration preserved below for future use.
 // TO GO LIVE: delete the two lines above, uncomment the block below.
@@ -9,4 +9,4 @@ import { SERVICES_DATA } from '@/data/services.data';
 //   return response.data;
 // };
 
-export const getServices = () => Promise.resolve(SERVICES_DATA);
+export const getServices = () => Promise.resolve(services);

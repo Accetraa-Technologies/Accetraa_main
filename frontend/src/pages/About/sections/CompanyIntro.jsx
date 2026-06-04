@@ -1,23 +1,14 @@
 import SectionHeader from '@/components/shared/SectionHeader';
+import { companyExpertise } from '@/data/company';
+import { industryNames } from '@/data/industries';
 import styles from './CompanyIntro.module.scss';
 
-const EXPERTISE = [
-  'Enterprise Product Engineering',
-  'Cloud Architecture & DevOps',
-  'AI & Intelligent Automation',
-  'Data Engineering & Analytics',
-  'Digital Transformation',
-  'Managed Technology Services',
-];
-
-const INDUSTRIES = [
-  'Financial Services',
-  'Healthcare & Life Sciences',
-  'Manufacturing & Logistics',
-  'Retail & E-Commerce',
-  'Education Technology',
-  'Government & Public Sector',
-];
+const CheckIcon = () => (
+  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true" className={styles.checkIcon}>
+    <circle cx="8" cy="8" r="7" fill="currentColor" opacity="0.12" />
+    <path d="M5 8l2 2 4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+  </svg>
+);
 
 const CompanyIntro = () => (
   <section className={styles.section} aria-label="Company introduction">
@@ -52,7 +43,7 @@ const CompanyIntro = () => (
           <div className={styles.infoCard}>
             <h3 className={styles.infoTitle}>Core Expertise</h3>
             <ul className={styles.list}>
-              {EXPERTISE.map(item => (
+              {companyExpertise.map(item => (
                 <li key={item} className={styles.listItem}>
                   <CheckIcon />
                   <span>{item}</span>
@@ -64,7 +55,7 @@ const CompanyIntro = () => (
           <div className={styles.infoCard}>
             <h3 className={styles.infoTitle}>Industries Served</h3>
             <ul className={styles.list}>
-              {INDUSTRIES.map(item => (
+              {industryNames.map(item => (
                 <li key={item} className={styles.listItem}>
                   <CheckIcon />
                   <span>{item}</span>
@@ -77,13 +68,6 @@ const CompanyIntro = () => (
       </div>
     </div>
   </section>
-);
-
-const CheckIcon = () => (
-  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true" className={styles.checkIcon}>
-    <circle cx="8" cy="8" r="7" fill="currentColor" opacity="0.12" />
-    <path d="M5 8l2 2 4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-  </svg>
 );
 
 export default CompanyIntro;

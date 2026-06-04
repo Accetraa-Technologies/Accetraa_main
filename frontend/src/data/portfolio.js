@@ -1,18 +1,19 @@
-// Dummy data — mirrors GET /api/v1/portfolio/categories/ and GET /api/v1/portfolio/ response shapes.
-// `thumbnail_url` is null and `images` is [] until media is uploaded via Django admin.
-// `category` is a nested object (matching PortfolioCategorySerializer) so asString() extracts .name.
-//
-// TO SWITCH TO LIVE API: remove this file's usage from services/portfolio.js and
-// uncomment the axiosInstance calls there.
+// ─── Portfolio categories ─────────────────────────────────────────────────────
+// Shape mirrors GET /api/v1/portfolio/categories/ (PortfolioCategorySerializer).
 
-export const PORTFOLIO_CATEGORIES = [
+export const portfolioCategories = [
   { id: 1, name: 'Web Projects',       slug: 'web-projects',       sort_order: 1 },
   { id: 2, name: 'Mobile Apps',         slug: 'mobile-apps',         sort_order: 2 },
   { id: 3, name: 'Enterprise Software', slug: 'enterprise-software', sort_order: 3 },
   { id: 4, name: 'AI & Data',           slug: 'ai-data',             sort_order: 4 },
 ];
 
-export const PORTFOLIO_ITEMS = [
+// ─── Portfolio items ──────────────────────────────────────────────────────────
+// Shape mirrors GET /api/v1/portfolio/ (PortfolioItemSerializer).
+// `thumbnail_url` is null and `images` is [] until media is uploaded via Django admin.
+// `category` is a nested object matching PortfolioCategorySerializer.
+
+export const portfolioItems = [
   {
     id: 1,
     title: 'UrSaloon — Salon Management Platform',
@@ -156,5 +157,27 @@ export const PORTFOLIO_ITEMS = [
     sort_order: 8,
     category: { id: 2, name: 'Mobile Apps', slug: 'mobile-apps', sort_order: 2 },
     images: [],
+  },
+];
+
+// ─── Portfolio overview capabilities ─────────────────────────────────────────
+// Used by PortfolioOverview section.
+
+export const portfolioCapabilities = [
+  {
+    title: 'Product Development',
+    body: 'We build enterprise-grade software products — from zero to production-ready. Every product is designed to scale and maintained to last.',
+  },
+  {
+    title: 'Custom Software Delivery',
+    body: 'Bespoke solutions engineered to your exact requirements. No off-the-shelf compromise — systems that fit your processes, not the other way around.',
+  },
+  {
+    title: 'Enterprise Solutions',
+    body: 'Large-scale platforms serving thousands of users across complex organisational structures. Security, compliance, and performance built in by default.',
+  },
+  {
+    title: 'Industry-Focused Innovation',
+    body: 'Deep vertical expertise allows us to move faster and make better decisions. We arrive with domain knowledge, not just technical skills.',
   },
 ];

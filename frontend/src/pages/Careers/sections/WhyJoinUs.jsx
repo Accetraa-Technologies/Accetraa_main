@@ -1,4 +1,5 @@
 import SectionHeader from '@/components/shared/SectionHeader';
+import { whyJoinReasons } from '@/data/careers';
 import styles from './WhyJoinUs.module.scss';
 
 const GrowthIcon = () => (
@@ -41,33 +42,13 @@ const FlexibleIcon = () => (
   </svg>
 );
 
-const REASONS = [
-  {
-    Icon: GrowthIcon,
-    title: 'Growth Opportunities',
-    body: 'Work on a diverse range of enterprise projects that genuinely challenge you. Every engagement builds a new skill, expands your domain knowledge, and moves your career forward.',
-  },
-  {
-    Icon: LearningIcon,
-    title: 'Learning Culture',
-    body: 'Regular knowledge-sharing sessions, access to courses and conferences, and a team that celebrates curiosity. We invest in the people who invest in their craft.',
-  },
-  {
-    Icon: InnovationIcon,
-    title: 'Modern Technology',
-    body: 'We work with current, relevant technology stacks on real enterprise problems. You\'ll build systems that matter — not maintain legacy codebases that nobody wants to touch.',
-  },
-  {
-    Icon: CollaborationIcon,
-    title: 'Senior Collaboration',
-    body: 'Small, senior teams without bureaucracy. Direct access to experienced engineers and decision-makers. No silos, no politics — just focused people building great software together.',
-  },
-  {
-    Icon: FlexibleIcon,
-    title: 'Flexible Environment',
-    body: 'Outcome-focused culture with remote-friendly policies and flexible working arrangements. We measure results, not hours at a desk.',
-  },
-];
+const ICON_MAP = {
+  growth:        <GrowthIcon />,
+  learning:      <LearningIcon />,
+  innovation:    <InnovationIcon />,
+  collaboration: <CollaborationIcon />,
+  flexible:      <FlexibleIcon />,
+};
 
 const WhyJoinUs = () => (
   <section className={styles.section} aria-label="Why join Accetraa">
@@ -81,9 +62,9 @@ const WhyJoinUs = () => (
       />
 
       <div className={styles.grid}>
-        {REASONS.map(({ Icon, title, body }) => (
+        {whyJoinReasons.map(({ iconKey, title, body }) => (
           <div key={title} className={styles.card}>
-            <div className={styles.iconWrap} aria-hidden="true"><Icon /></div>
+            <div className={styles.iconWrap} aria-hidden="true">{ICON_MAP[iconKey]}</div>
             <h3 className={styles.title}>{title}</h3>
             <p className={styles.body}>{body}</p>
           </div>
