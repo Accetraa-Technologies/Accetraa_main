@@ -92,10 +92,10 @@ export const industriesServed = [
 // Used by About/CompanyIntro (simple list, no icons or descriptions needed).
 
 export const industryNames = [
-  'Financial Services',
-  'Healthcare & Life Sciences',
-  'Manufacturing & Logistics',
+  'Beauty & Wellness',
+  'Salon & Spa Management',
+  'Service Industry Businesses',
+  'Freelancers & Beauty Professionals',
   'Retail & E-Commerce',
-  'Education Technology',
-  'Government & Public Sector',
+  'Technology & SaaS',
 ];

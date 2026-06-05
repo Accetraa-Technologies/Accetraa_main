@@ -2,20 +2,20 @@
 // Used by HeroSection.
 
 export const heroStats = [
-  { value: '50+', label: 'Projects Delivered' },
-  { value: '30+', label: 'Clients Served' },
-  { value: '8+',  label: 'Industries' },
-  { value: '5+',  label: 'Years Experience' },
+  { value: 'UrSaloon',    label: 'Flagship Platform' },
+  { value: 'Salon & Spa', label: 'Primary Market' },
+  { value: 'AI-Powered',  label: 'Smart Automation' },
+  { value: '2026',        label: 'Founded' },
 ];
 
 // ─── Company overview metrics ─────────────────────────────────────────────────
 // Used by CompanyOverview section on the Home page.
 
 export const companyMetrics = [
-  { value: '50+', label: 'Projects Delivered' },
-  { value: '30+', label: 'Enterprise Clients' },
-  { value: '8+',  label: 'Industries Served' },
-  { value: '5+',  label: 'Years of Excellence' },
+  { value: '2026', label: 'Year Founded' },
+  { value: '1',    label: 'Flagship SaaS Platform' },
+  { value: '4',    label: 'Core Service Areas' },
+  { value: 'Seed', label: 'Investment Stage' },
 ];
 
 // ─── Company overview differentiators ────────────────────────────────────────
@@ -24,41 +24,51 @@ export const companyMetrics = [
 export const companyDifferentiators = [
   {
     number: '01',
-    title: 'We Build, Not Just Advise',
-    body: 'Our engineers ship production code. Every engagement ends with working software, not a slide deck.',
+    title: 'Product-Led Growth',
+    body: 'We build proprietary SaaS platforms — not just services. UrSaloon, our flagship platform, demonstrates our ability to design, build, and scale products that create lasting market value.',
   },
   {
     number: '02',
-    title: 'Enterprise Architecture from Day One',
-    body: 'Systems designed to handle 10x growth — security, scalability, and observability built in from the start.',
+    title: 'Cloud-Native from the Ground Up',
+    body: 'Every platform we build is designed for scale from day one — multi-tenant SaaS architecture, cloud-native infrastructure, and AI-enhanced features built in from the start.',
   },
   {
     number: '03',
-    title: 'End-to-End Accountability',
-    body: 'One partner from discovery through to production. No handoff chaos, no accountability gaps.',
+    title: 'Focused Industry Expertise',
+    body: 'We are purpose-built for beauty, wellness, and service industries — bringing deep domain knowledge that enables faster decisions, better product fit, and a stronger competitive position.',
   },
 ];
 
-// ─── Full statistics section ──────────────────────────────────────────────────
+// ─── About page statistics section heading ────────────────────────────────────
+// Used by StatisticsSection on the About page.
+
+export const statsSection = {
+  eyebrow: 'Where We Stand',
+  title: 'A technology company built for the future',
+  subtitle:
+    'Accetraa was incorporated in 2026 with a clear mandate — to build scalable SaaS platforms and deliver AI-driven solutions for the beauty, wellness, and service industries.',
+};
+
+// ─── Company milestone stats ──────────────────────────────────────────────────
 // Used by StatisticsSection on the About page.
 
 export const companyStats = [
-  { value: '50+',  label: 'Projects Delivered',  description: 'Enterprise-grade systems shipped to production' },
-  { value: '30+',  label: 'Clients Served',       description: 'Organisations that trust Accetraa to deliver' },
-  { value: '8+',   label: 'Industries Supported', description: 'Verticals where we maintain deep domain expertise' },
-  { value: '98%',  label: 'Client Retention',     description: 'Clients who return for subsequent engagements' },
-  { value: '100%', label: 'On-Time Delivery',     description: 'Milestones delivered on or ahead of schedule' },
-  { value: '5+',   label: 'Years of Excellence',  description: 'Building enterprise technology since 2019' },
+  { value: '2026', label: 'Year Founded',        description: 'Incorporated in Karnataka, India with a global product vision' },
+  { value: 'SaaS', label: 'Business Model',      description: 'Subscription-based platform revenue — scalable and recurring' },
+  { value: '1st',  label: 'Platform Launched',   description: 'UrSaloon — our flagship salon and spa management SaaS platform' },
+  { value: 'AI',   label: 'Technology Core',     description: 'AI-enhanced features driving intelligent automation across products' },
+  { value: '2029', label: 'Investment Roadmap',  description: 'Seed funding and international expansion planned by 2029' },
+  { value: '100%', label: 'Product-Led',         description: 'Every service we offer is backed by proprietary platform capability' },
 ];
 
 // ─── Portfolio success metrics ────────────────────────────────────────────────
 // Used by SuccessMetrics section on the Portfolio page.
 
 export const portfolioMetrics = [
-  { value: '50+', label: 'Projects Delivered',  sub: 'Enterprise-grade systems in production' },
-  { value: '12+', label: 'Products Built',       sub: 'Proprietary platforms and SaaS products' },
-  { value: '8+',  label: 'Industries Served',    sub: 'Deep domain expertise across verticals' },
-  { value: '98%', label: 'Client Satisfaction',  sub: 'Measured across all closed engagements' },
+  { value: '2026', label: 'Founded',              sub: 'Incorporated in Karnataka, India' },
+  { value: '1',    label: 'SaaS Platform',        sub: 'UrSaloon — beauty and wellness management' },
+  { value: '4',    label: 'Core Services',        sub: 'Software, SaaS, AI, and digital transformation' },
+  { value: 'Seed', label: 'Investment Stage',     sub: 'Actively building towards our first funding round' },
 ];
 
 // ─── Core values ──────────────────────────────────────────────────────────────
@@ -69,34 +79,50 @@ export const coreValues = [
   {
     iconKey: 'innovation',
     title: 'Innovation',
-    body: 'We continuously invest in emerging technologies and modern engineering practices to ensure our clients benefit from the best of what technology has to offer.',
+    body: 'We continuously invest in emerging technologies and modern engineering practices to build platforms that stay ahead of industry needs — not just catch up to them.',
   },
   {
     iconKey: 'integrity',
     title: 'Integrity',
-    body: 'We operate with transparency and honesty at every stage. Our clients receive accurate progress reports, honest timelines, and candid technical assessments.',
+    body: 'We operate with transparency and honesty at every stage — with our clients, our investors, and our team. No inflated claims, no hidden trade-offs.',
   },
   {
     iconKey: 'clientSuccess',
     title: 'Client Success',
-    body: "Every decision we make is evaluated through the lens of client outcomes. We are not successful unless our clients are. Their growth is our benchmark.",
+    body: 'Every product decision we make is evaluated through the lens of client outcomes. The businesses that use our platforms should grow because of them.',
   },
   {
     iconKey: 'collaboration',
     title: 'Collaboration',
-    body: "Great software is built by teams that communicate clearly and respect each other's expertise. We embed ourselves in our clients' organisations as genuine partners.",
+    body: 'Great software is built by teams that communicate clearly and respect each other\'s expertise. We partner deeply with clients and embed ourselves in their success.',
   },
   {
     iconKey: 'quality',
     title: 'Quality',
-    body: 'We do not ship code that we are not proud of. Rigorous code reviews, automated testing, and architectural discipline are non-negotiable standards in every engagement.',
+    body: 'We do not ship software we are not proud of. Rigorous code reviews, automated testing, and architectural discipline are non-negotiable standards in every build.',
   },
   {
     iconKey: 'security',
     title: 'Security',
-    body: 'Security is not an afterthought — it is designed into every system we build. We apply industry best practices and continuous threat modelling across all deliverables.',
+    body: 'Security is designed into every platform we build — from architecture decisions through deployment pipelines. It is never an afterthought.',
   },
 ];
+
+// ─── Mission and Vision ───────────────────────────────────────────────────────
+// Used by MissionVision section on the About page.
+
+export const missionVision = {
+  mission: {
+    title: 'Delivering platforms that transform how service businesses operate',
+    body: 'Our mission is to build innovative, scalable SaaS platforms that enable beauty, wellness, and service industry businesses to operate more efficiently, serve their customers better, and grow with confidence. We measure success not by lines of code delivered, but by the real impact our products create for every business that uses them.',
+    pills: ['Product-first thinking', 'Measurable outcomes', 'Long-term platform value'],
+  },
+  vision: {
+    title: 'To become a leading technology and SaaS company for beauty, wellness, and service industries worldwide',
+    body: 'We envision a future where Accetraa-built platforms power millions of beauty and wellness businesses globally — from independent freelancers to multi-location salon chains. A company recognised not for its size, but for the quality of its products and the depth of its impact on the industries it serves.',
+    pills: ['SaaS at global scale', 'Industry-defining platforms', 'Beauty & wellness tech leader'],
+  },
+};
 
 // ─── About page — Why Choose Us differentiators ───────────────────────────────
 // Used by WhyChooseUs section on the About page (numbered layout).
@@ -104,27 +130,27 @@ export const coreValues = [
 export const aboutDifferentiators = [
   {
     number: '01',
-    title: 'Experienced Engineering Team',
-    body: 'Our engineers average over eight years of industry experience across enterprise, SaaS, and regulated industries. We bring seniority to every engagement, not just to the account management layer.',
-    highlight: '8+ years average experience',
+    title: 'SaaS-First Engineering Team',
+    body: 'Our engineers are experienced in building multi-tenant SaaS platforms — not just project-based software. Every technical decision is made with scalability, maintainability, and long-term product value in mind.',
+    highlight: 'Built for product scale',
   },
   {
     number: '02',
     title: 'Modern Technology Stack',
-    body: 'We work with proven, contemporary technologies — React, Node.js, Python, Kubernetes, AWS, Azure, and beyond. No legacy debt, no framework lock-in, no outdated practices introduced into your systems.',
+    body: 'We work with proven, contemporary technologies — React, Node.js, Python, Kubernetes, AWS, and beyond. Cloud-native by default, with AI capabilities built into the platform from the start.',
     highlight: 'Cloud-native by default',
   },
   {
     number: '03',
-    title: 'Scalable Solution Design',
-    body: 'Every system we design accommodates at least 10x your current load. We engineer for growth from the first architecture review, preventing costly refactors as your business scales.',
-    highlight: 'Designed for 10x growth',
+    title: 'Domain-Focused Product Design',
+    body: 'We specialise in beauty, wellness, and service industries — which means our product decisions are grounded in deep domain knowledge. We understand the workflows, the customers, and the competitive landscape.',
+    highlight: 'Deep domain knowledge',
   },
   {
     number: '04',
     title: 'Long-Term Partnership Model',
-    body: 'We structure our engagements for sustained value — not one-off projects. Clients retain a dedicated team that understands their domain, their codebase, and their business context deeply over time.',
-    highlight: 'Sustained, not transactional',
+    body: 'We build lasting relationships with clients and partners — not one-off transactions. Our engagement model is designed for sustained growth, where every interaction deepens the value we deliver.',
+    highlight: 'Growth-focused partnership',
   },
 ];
 
@@ -136,32 +162,32 @@ export const homeBenefits = [
   {
     iconKey: 'industry',
     title: 'Industry Expertise',
-    body: 'Deep domain knowledge across FinTech, HealthTech, Logistics, and SaaS. We understand your sector before writing the first line of code.',
+    body: 'Deep domain knowledge in beauty, wellness, and service industries. We understand the workflows, the customer expectations, and the technology gaps our platforms need to close.',
   },
   {
     iconKey: 'architecture',
     title: 'Scalable Architecture',
-    body: 'Every system we build is designed for 10x growth from the start — distributed, observable, and cloud-native by default.',
+    body: 'Every platform we build is cloud-native and multi-tenant by design — built to scale from a handful of clients to thousands without re-architecture.',
   },
   {
     iconKey: 'engagement',
-    title: 'Dedicated Engagement',
-    body: 'Transparent communication, fixed points of contact, and weekly progress reviews. No black boxes, no surprises.',
+    title: 'Dedicated Partnership',
+    body: 'Transparent communication, clear product roadmaps, and responsive support. No black boxes — just honest collaboration at every stage of the journey.',
   },
   {
     iconKey: 'security',
     title: 'Security by Default',
-    body: 'Enterprise-grade security practices — OWASP compliance, threat modelling, and security reviews — are built into every delivery.',
+    body: 'Enterprise-grade security practices — OWASP standards, secure-by-design architecture, and continuous vulnerability monitoring — built into every platform we deliver.',
   },
 ];
 
 // ─── Company expertise list (About — CompanyIntro) ────────────────────────────
 
 export const companyExpertise = [
-  'Enterprise Product Engineering',
-  'Cloud Architecture & DevOps',
+  'SaaS Product Development',
+  'Software Engineering',
   'AI & Intelligent Automation',
-  'Data Engineering & Analytics',
   'Digital Transformation',
-  'Managed Technology Services',
+  'Cloud Architecture & DevOps',
+  'Enterprise Application Development',
 ];

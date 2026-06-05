@@ -99,7 +99,7 @@ export const serviceDetails = [
       'Full source code ownership transferred at project end',
     ],
     businessValue:
-      'Enterprises that partner with Accetraa for product engineering reduce time-to-market by an average of 30% compared to building an in-house team from scratch, while accessing senior-level expertise without the overhead of permanent headcount.',
+      'Partnering with an experienced product engineering team allows you to access senior-level expertise without the overhead of building an in-house team from scratch — accelerating time-to-market while keeping costs predictable and risks manageable.',
     technologies: ['React', 'Node.js', 'Python', 'Django', 'PostgreSQL', 'Docker', 'AWS', 'CI/CD'],
   },
   {
@@ -116,7 +116,7 @@ export const serviceDetails = [
       'Security hardening and compliance readiness',
     ],
     businessValue:
-      'Clients who move to cloud-native infrastructure with Accetraa see an average 40% reduction in infrastructure operating costs within 12 months, alongside measurable improvements in deployment frequency and incident recovery time.',
+      'Moving to cloud-native infrastructure eliminates the cost and fragility of legacy on-premise systems. Organisations typically see significant improvements in deployment frequency, system reliability, and infrastructure cost efficiency — with full visibility and control at every layer.',
     technologies: ['AWS', 'Azure', 'GCP', 'Kubernetes', 'Docker', 'Terraform', 'GitHub Actions', 'Prometheus'],
   },
   {
@@ -133,7 +133,7 @@ export const serviceDetails = [
       'Ongoing model monitoring and retraining included',
     ],
     businessValue:
-      'Our AI automation clients report an average 60% reduction in manual processing time for targeted workflows within six months of deployment, with measurable improvement in accuracy and throughput.',
+      'AI-driven automation eliminates high-volume manual work, reduces error rates, and frees teams to focus on higher-value activities. Well-designed automation workflows deliver measurable improvements in throughput and accuracy from the first deployment.',
     technologies: ['Python', 'PyTorch', 'LangChain', 'OpenAI API', 'Hugging Face', 'FastAPI', 'MLflow', 'AWS SageMaker'],
   },
   {

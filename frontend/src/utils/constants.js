@@ -18,6 +18,15 @@ export const NAV_LINKS = [
 
 export const NAV_CTA = { label: 'Book Consultation', path: ROUTES.CONTACT };
 
+export const FOOTER_NAV_LINKS = [
+  { label: 'Home',      path: ROUTES.HOME },
+  { label: 'About',     path: ROUTES.ABOUT },
+  { label: 'Services',  path: ROUTES.SERVICES },
+  { label: 'Investors', path: ROUTES.INVESTORS },
+  { label: 'Careers',   path: ROUTES.CAREERS },
+  { label: 'Contact',   path: ROUTES.CONTACT },
+];
+
 export const FOOTER_SERVICES = [
   { label: 'Digital Transformation', path: ROUTES.SERVICES },
   { label: 'Product Development',    path: ROUTES.SERVICES },

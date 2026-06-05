@@ -18,24 +18,24 @@ const CompanyIntro = () => (
         <div className={styles.left}>
           <SectionHeader
             eyebrow="About Accetraa Technologies"
-            title="Transforming businesses through precision engineering"
-            subtitle="Founded with a singular focus on enterprise outcomes, Accetraa Technologies combines deep technical expertise with strategic consulting to help organisations navigate digital transformation. We build systems that scale, perform, and endure."
+            title="Building the future of beauty and wellness technology"
+            subtitle="Founded in 2026, Accetraa Technologies is a product-led technology company focused on building innovative SaaS platforms and AI-driven solutions for the beauty, wellness, and service industries."
             align="left"
           />
 
           <p className={styles.body}>
-            We are not a staffing agency, and we are not a generic IT consultancy. Accetraa is
-            a technology partner that takes end-to-end ownership — from architecture design
-            through production deployment and long-term support. Every engagement is led by
-            senior engineers who have built systems at scale, for clients who demand the highest
-            standards.
+            Our flagship platform, UrSaloon, is a comprehensive cloud-based SaaS solution
+            for salons, spas, beauty parlours, and independent beauty professionals —
+            covering appointment management, staff scheduling, billing, inventory, and customer
+            loyalty. We are actively onboarding businesses across India and building the
+            foundation for global expansion.
           </p>
 
           <p className={styles.body}>
-            Headquartered in Karnataka, India, our team serves enterprise clients across
-            industries including FinTech, HealthTech, Manufacturing, and SaaS. Whether you
-            need a greenfield platform, a modernisation programme, or an embedded engineering
-            capability, Accetraa delivers with rigour and accountability.
+            Headquartered in Karnataka, India, Accetraa combines deep technical expertise
+            with industry-focused product design. Alongside our SaaS products, we deliver
+            software development, AI consulting, and digital transformation services to help
+            businesses of all sizes modernise their operations.
           </p>
         </div>
 
@@ -53,7 +53,7 @@ const CompanyIntro = () => (
           </div>
 
           <div className={styles.infoCard}>
-            <h3 className={styles.infoTitle}>Industries Served</h3>
+            <h3 className={styles.infoTitle}>Industries We Serve</h3>
             <ul className={styles.list}>
               {industryNames.map(item => (
                 <li key={item} className={styles.listItem}>

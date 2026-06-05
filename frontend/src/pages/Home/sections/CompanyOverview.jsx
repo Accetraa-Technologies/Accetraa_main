@@ -10,8 +10,8 @@ const CompanyOverview = () => (
       <div className={styles.top}>
         <SectionHeader
           eyebrow="Who We Are"
-          title="Built for enterprise. Engineered for impact."
-          subtitle="We are a technology partner — not a vendor. Accetraa combines senior engineering talent with strategic thinking to deliver platforms that genuinely move the needle."
+          title="A product-led technology company built for growth."
+          subtitle="Founded in 2026, Accetraa Technologies builds SaaS platforms and delivers AI-driven software solutions for the beauty, wellness, and service industries — combining product engineering expertise with a clear long-term vision."
           align="left"
         />
       </div>

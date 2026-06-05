@@ -72,7 +72,7 @@ export const employeeBenefits = [
 
 export const cultureStats = [
   { value: '100%',  label: 'Remote-capable roles' },
-  { value: '8+',    label: 'Years of engineering' },
+  { value: 'SaaS',  label: 'Product focus' },
   { value: 'Agile', label: 'Delivery culture' },
   { value: '0',     label: 'Unnecessary meetings' },
 ];

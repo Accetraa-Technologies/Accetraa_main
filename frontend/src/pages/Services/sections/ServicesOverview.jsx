@@ -10,8 +10,8 @@ const ServicesOverview = () => (
         <div className={styles.left}>
           <SectionHeader
             eyebrow="What We Deliver"
-            title="Complete technology services for the modern enterprise"
-            subtitle="Accetraa provides end-to-end technology services across the full software delivery lifecycle. Whether you need a new platform built from scratch, an existing system modernised, or strategic technology advice — our senior engineers and consultants deliver with rigour and accountability."
+            title="Technology services that move your business forward"
+            subtitle="Accetraa provides software development, SaaS product engineering, AI solutions, and digital transformation services. Whether you need a new platform built from scratch, an existing system modernised, or strategic technology advice — we deliver with clarity and accountability."
             align="left"
           />
         </div>

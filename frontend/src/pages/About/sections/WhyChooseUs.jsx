@@ -10,8 +10,8 @@ const WhyChooseUs = () => (
         <div className={styles.left}>
           <SectionHeader
             eyebrow="Why Accetraa"
-            title="Four reasons the best enterprises choose us"
-            subtitle="We have earned our clients' trust through consistent delivery, honest communication, and technical rigour — not through sales pitches."
+            title="Four reasons clients and partners choose us"
+            subtitle="We build trust through technical excellence, honest communication, and a genuine focus on client outcomes — not through marketing claims."
             align="left"
           />
         </div>

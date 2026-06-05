@@ -1,4 +1,5 @@
 import SectionHeader from '@/components/shared/SectionHeader';
+import { missionVision } from '@/data/company';
 import styles from './MissionVision.module.scss';
 
 const MissionVision = () => (
@@ -19,19 +20,12 @@ const MissionVision = () => (
             <MissionIcon />
           </div>
           <span className={styles.cardLabel}>Mission</span>
-          <h3 className={styles.cardTitle}>
-            Delivering technology that creates lasting business value
-          </h3>
-          <p className={styles.cardBody}>
-            Our mission is to engineer robust, scalable technology solutions that enable
-            enterprises to operate more efficiently, compete more effectively, and serve
-            their customers with excellence. We measure success not by lines of code, but by
-            the tangible impact we deliver to every organisation we partner with.
-          </p>
+          <h3 className={styles.cardTitle}>{missionVision.mission.title}</h3>
+          <p className={styles.cardBody}>{missionVision.mission.body}</p>
           <ul className={styles.pillList} aria-label="Mission pillars">
-            <li className={styles.pill}>Business-first thinking</li>
-            <li className={styles.pill}>Measurable outcomes</li>
-            <li className={styles.pill}>Long-term ownership</li>
+            {missionVision.mission.pills.map(pill => (
+              <li key={pill} className={styles.pill}>{pill}</li>
+            ))}
           </ul>
         </div>
 
@@ -40,19 +34,12 @@ const MissionVision = () => (
             <VisionIcon />
           </div>
           <span className={styles.cardLabel}>Vision</span>
-          <h3 className={styles.cardTitle}>
-            To be the technology partner that enterprises trust unconditionally
-          </h3>
-          <p className={styles.cardBody}>
-            We envision a future where Accetraa is synonymous with engineering excellence
-            across Asia — a firm that global enterprises choose not because we are the
-            largest, but because we are the most dependable. A company where every team
-            member is proud of the work they deliver and the standards they uphold.
-          </p>
+          <h3 className={styles.cardTitle}>{missionVision.vision.title}</h3>
+          <p className={styles.cardBody}>{missionVision.vision.body}</p>
           <ul className={styles.pillList} aria-label="Vision pillars">
-            <li className={styles.pill}>Engineering excellence</li>
-            <li className={styles.pill}>Trusted partnership</li>
-            <li className={styles.pill}>Global standards</li>
+            {missionVision.vision.pills.map(pill => (
+              <li key={pill} className={styles.pill}>{pill}</li>
+            ))}
           </ul>
         </div>
 

@@ -3,28 +3,28 @@ export const teamMembers = [
     name: 'Arjun Nair',
     role: 'Chief Executive Officer',
     description:
-      'Over 15 years of experience leading technology delivery for enterprise clients across FinTech and HealthTech. Passionate about building engineering cultures that ship with confidence.',
+      'Technology entrepreneur and product leader with extensive experience in building SaaS platforms and leading engineering teams. Passionate about using technology to transform traditional service industries.',
     avatar: null,
   },
   {
     name: 'Priya Sharma',
     role: 'Chief Technology Officer',
     description:
-      'Cloud architecture specialist with a decade of experience designing distributed systems on AWS and Azure. Previously led platform engineering at a publicly-listed SaaS company.',
+      'Cloud architecture specialist experienced in designing scalable, multi-tenant SaaS systems on AWS and Azure. Leads all platform engineering and technical strategy for Accetraa\'s product portfolio.',
     avatar: null,
   },
   {
     name: 'Rohit Desai',
     role: 'VP — Engineering',
     description:
-      "Full-stack engineer turned engineering leader. Rohit oversees all delivery teams and maintains the technical standards that define Accetraa's engineering culture.",
+      'Full-stack engineer and engineering leader responsible for delivery teams and the technical standards that define Accetraa\'s engineering culture. Focused on platform quality, performance, and reliability.',
     avatar: null,
   },
   {
     name: 'Ananya Krishnan',
     role: 'Head of Client Success',
     description:
-      'Ensures every engagement delivers measurable value from day one. Ananya has managed programmes for enterprises with 10,000+ end users across diverse industries.',
+      'Customer success leader focused on ensuring every client achieves measurable outcomes from our platforms. Leads onboarding, support, and partnership programmes for beauty and wellness businesses on UrSaloon.',
     avatar: null,
   },
 ];

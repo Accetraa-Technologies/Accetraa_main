@@ -1,5 +1,5 @@
 import { Link, NavLink } from 'react-router-dom';
-import { NAV_LINKS, FOOTER_SERVICES, FOOTER_CONTACT, ROUTES } from '@/utils/constants';
+import { FOOTER_NAV_LINKS, FOOTER_SERVICES, FOOTER_CONTACT, ROUTES } from '@/utils/constants';
 import Logo from '@/components/shared/Logo';
 import styles from './Footer.module.scss';
 
@@ -69,7 +69,7 @@ const Footer = () => {
             <div className={styles.column}>
               <h3 className={styles.columnTitle}>Company</h3>
               <ul className={styles.linkList}>
-                {NAV_LINKS.map(({ label, path }) => (
+                {FOOTER_NAV_LINKS.map(({ label, path }) => (
                   <li key={path}>
                     <NavLink to={path} className={styles.footerLink}>
                       {label}

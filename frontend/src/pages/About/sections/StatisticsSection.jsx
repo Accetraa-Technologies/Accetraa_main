@@ -1,16 +1,13 @@
-import { companyStats } from '@/data/company';
+import { companyStats, statsSection } from '@/data/company';
 import styles from './StatisticsSection.module.scss';
 
 const StatisticsSection = () => (
-  <section className={styles.section} aria-label="Company statistics">
+  <section className={styles.section} aria-label="Company milestones">
     <div className="container">
       <div className={styles.header}>
-        <span className={styles.eyebrow}>By the Numbers</span>
-        <h2 className={styles.title}>Consistent delivery, measurable results</h2>
-        <p className={styles.subtitle}>
-          These numbers reflect not what we aspire to, but what we have already delivered.
-          Every metric is earned through client partnerships and verified outcomes.
-        </p>
+        <span className={styles.eyebrow}>{statsSection.eyebrow}</span>
+        <h2 className={styles.title}>{statsSection.title}</h2>
+        <p className={styles.subtitle}>{statsSection.subtitle}</p>
       </div>
 
       <dl className={styles.grid}>

@@ -18,8 +18,8 @@ const InvestorOverview = () => (
         <div className={styles.left}>
           <SectionHeader
             eyebrow="Why Accetraa"
-            title="A technology company built for enduring enterprise value"
-            subtitle="We combine senior engineering talent with a scalable delivery model to serve the enterprise clients who demand the highest standards — and who pay accordingly."
+            title="An early-stage SaaS company with a clear product vision and a large addressable market"
+            subtitle="Founded in 2026, Accetraa is building the technology infrastructure for the beauty, wellness, and service industries — starting with UrSaloon and expanding into a full vertical SaaS ecosystem."
             align="left"
           />
 
@@ -53,9 +53,9 @@ const InvestorOverview = () => (
 
           <div className={styles.trustNote}>
             <p className={styles.trustText}>
-              Accetraa's consistent delivery record, high client retention, and growing proprietary
-              product portfolio make it a compelling technology investment opportunity at an
-              inflection point in its growth trajectory.
+              Accetraa is an early-stage company at the beginning of a significant growth journey —
+              building proprietary SaaS platforms for a large, underserved market with strong
+              long-term recurring revenue potential and a clear roadmap to investment readiness by 2029.
             </p>
           </div>
         </div>

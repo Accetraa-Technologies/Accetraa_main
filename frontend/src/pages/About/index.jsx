@@ -20,13 +20,13 @@ const About = () => (
   <>
     <SEO
       title="About Us"
-      description="Accetraa Technologies is an enterprise technology partner delivering product engineering, cloud architecture, and AI automation solutions that drive measurable business outcomes."
+      description="Accetraa Technologies is a product-led technology company founded in 2026, building innovative SaaS platforms and AI-driven solutions for the beauty, wellness, and service industries."
     />
 
     <main>
       <PageHero
         title="About Accetraa Technologies"
-        subtitle="We are a technology partner — not a vendor. We combine senior engineering talent with strategic thinking to deliver enterprise systems that scale, perform, and endure."
+        subtitle="Founded in 2026, we are a product-led technology company building SaaS platforms and AI-driven solutions for the beauty, wellness, and service industries."
         breadcrumbs={BREADCRUMBS}
         size="sm"
         align="center"
@@ -43,9 +43,9 @@ const About = () => (
 
       <CTABanner
         eyebrow="Work With Us"
-        heading="Ready to partner with a team that takes ownership?"
-        description="Schedule a consultation with our leadership team. No sales pitch — just an honest conversation about how we can help you achieve your goals."
-        primaryAction={{ label: 'Book Consultation', href: ROUTES.CONTACT }}
+        heading="Let's build something meaningful together"
+        description="Whether you need a custom software solution, want to explore UrSaloon for your business, or want to discuss a partnership — our team is ready to listen."
+        primaryAction={{ label: 'Get in Touch', href: ROUTES.CONTACT }}
         variant="dark"
         align="split"
       />
