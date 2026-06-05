@@ -88,6 +88,8 @@
   display: flex;
   gap: $space-4;
   align-items: flex-start;
+
+  > :last-child { min-width: 0; }
 }
 
 .addressIcon {
@@ -173,4 +175,7 @@ a.contactRow:hover {
   font-size: $font-size-sm;
   font-weight: $font-weight-medium;
   color: $color-neutral-800;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  min-width: 0;
 }

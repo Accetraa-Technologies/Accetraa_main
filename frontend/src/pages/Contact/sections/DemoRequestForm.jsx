@@ -35,11 +35,8 @@ function StagingInfoIcon() {
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 const PRODUCT_OPTIONS = [
-  { value: 'HRMS',                          label: 'HRMS — Human Resource Management System' },
-  { value: 'ERP',                            label: 'ERP — Enterprise Resource Planning' },
-  { value: 'Recruitment Management System', label: 'Recruitment Management System' },
-  { value: 'AI Chatbot',                    label: 'AI Chatbot' },
-  { value: 'BPO Platform',                  label: 'BPO Platform' },
+  { value: 'UrSaloon', label: 'UrSaloon — Salon & Spa Management Platform' },
+  { value: 'HRMS',     label: 'HRMS — Human Resource Management System' },
 ];
 
 const COMPANY_SIZE_OPTIONS = [

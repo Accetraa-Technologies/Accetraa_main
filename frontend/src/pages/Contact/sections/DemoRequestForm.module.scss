@@ -82,6 +82,8 @@
   display: flex;
   flex-direction: column;
   gap: $space-5;
+
+  @include respond-below('sm') { padding-inline: $space-5; }
 }
 
 .formRow {
