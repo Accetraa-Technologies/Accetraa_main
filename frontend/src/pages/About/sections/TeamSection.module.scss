@@ -16,7 +16,7 @@
   gap: $space-6;
 
   @include respond-to('sm')  { grid-template-columns: repeat(2, 1fr); }
-  @include respond-to('xl')  { grid-template-columns: repeat(4, 1fr); }
+  @include respond-to('lg')  { grid-template-columns: repeat(3, 1fr); }
 }
 
 .footnote {

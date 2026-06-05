@@ -54,7 +54,7 @@ const Footer = () => {
                 products, platforms, and intelligent systems that create lasting competitive advantage.
               </p>
               <a
-                href="https://linkedin.com/company/accetraa"
+                href="https://www.linkedin.com/company/accetraa-technologies-pvt-ltd/posts/?feedView=all"
                 className={styles.social}
                 target="_blank"
                 rel="noopener noreferrer"

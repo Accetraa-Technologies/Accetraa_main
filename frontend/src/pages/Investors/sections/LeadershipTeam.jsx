@@ -8,22 +8,23 @@ const LeadershipTeam = () => (
     <div className="container">
       <SectionHeader
         eyebrow="Leadership"
-        title="The team behind the results"
-        subtitle="Our leadership combines deep technical expertise with commercial acumen. They lead by example — every client engagement benefits from their direct involvement."
+        title="Led with purpose and expertise"
+        subtitle="Accetraa is guided by a leadership team that brings together technology vision, financial discipline, and a long-term commitment to building lasting value."
         align="center"
         className={styles.header}
       />
 
       <div className={styles.grid}>
         {teamMembers.map(member => (
-          <TeamMemberCard key={member.name} {...member} />
+          <TeamMemberCard
+            key={member.name}
+            name={member.name}
+            role={member.role}
+            description={member.description}
+            image={member.avatar}
+          />
         ))}
       </div>
-
-      <p className={styles.footnote}>
-        Supported by a full team of senior engineers, solution architects, and client success
-        professionals — each selected for expertise, not availability.
-      </p>
     </div>
   </section>
 );

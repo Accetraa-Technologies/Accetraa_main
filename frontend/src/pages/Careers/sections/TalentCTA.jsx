@@ -26,7 +26,7 @@ const TalentCTA = () => (
             Reach Out Directly
           </Button>
           <a
-            href="https://linkedin.com/company/accetraa"
+            href="https://www.linkedin.com/company/accetraa-technologies-pvt-ltd/posts/?feedView=all"
             target="_blank"
             rel="noopener noreferrer"
             className={styles.linkedInBtn}

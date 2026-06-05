@@ -61,11 +61,18 @@ export const PortfolioCard = ({ image, category, title, description, href, class
 
 // ─── Product Card ─────────────────────────────────────────────────────────────
 
-export const ProductCard = ({ icon, badge, title, description, features = [], href, className = '' }) => (
-  <Card variant="product" hoverable className={className}>
+export const ProductCard = ({ thumbnail, icon, badge, title, description, features = [], href, className = '' }) => (
+  <Card variant="product" hoverable className={`${className} ${thumbnail ? styles['card--product-has-thumb'] : ''}`}>
+    {thumbnail && (
+      <div className={styles.productThumbnail}>
+        <img src={thumbnail} alt={title} className={styles.productThumbnailImg} loading="lazy" />
+        {badge && <span className={styles.productBadgeOverlay}>{badge}</span>}
+      </div>
+    )}
+    <div className={styles.productBody}>
     <div className={styles.productHeader}>
       {icon && <div className={styles.productIcon}>{icon}</div>}
-      {badge && <span className={styles.productBadge}>{badge}</span>}
+      {!thumbnail && badge && <span className={styles.productBadge}>{badge}</span>}
     </div>
     <h3 className={styles.productTitle}>{title}</h3>
     {description && <p className={styles.productDesc}>{description}</p>}
@@ -79,6 +86,7 @@ export const ProductCard = ({ icon, badge, title, description, features = [], hr
         Explore product <span aria-hidden="true">→</span>
       </a>
     )}
+    </div>
   </Card>
 );
 

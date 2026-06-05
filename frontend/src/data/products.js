@@ -1,6 +1,6 @@
 // Shape mirrors GET /api/v1/products/ (ProductSerializer).
 // `badge`, `features`, and `url` are frontend-only fields.
-// `thumbnail_url` is null until media is uploaded via Django admin.
+// `thumbnail_url`: local path (from /public) or external URL.
 
 export const products = [
   {
@@ -10,7 +10,7 @@ export const products = [
     tagline: 'The all-in-one management platform for salons and spas.',
     short_description:
       'UrSaloon streamlines every aspect of salon and spa operations — from appointment scheduling and staff management to inventory, billing, and customer loyalty programmes.',
-    thumbnail_url: null,
+    thumbnail_url: '/images/products/ursaloon.png',
     is_featured: true,
     sort_order: 1,
     badge: 'Live',
@@ -30,7 +30,7 @@ export const products = [
     tagline: 'Enterprise-grade human resource management for growing organisations.',
     short_description:
       'A comprehensive HRMS covering the entire employee lifecycle — from onboarding and attendance tracking to payroll processing, performance reviews, and compliance reporting.',
-    thumbnail_url: null,
+    thumbnail_url: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&h=400&fit=crop&auto=format',
     is_featured: true,
     sort_order: 2,
     badge: 'Live',

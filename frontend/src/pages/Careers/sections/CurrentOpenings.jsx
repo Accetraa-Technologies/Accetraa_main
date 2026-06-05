@@ -39,7 +39,7 @@ const CurrentOpenings = () => (
 
       <p className={styles.note}>
         Positions are announced on this page, our{' '}
-        <a href="https://linkedin.com/company/accetraa" target="_blank" rel="noopener noreferrer" className={styles.noteLink}>
+        <a href="https://www.linkedin.com/company/accetraa-technologies-pvt-ltd/posts/?feedView=all" target="_blank" rel="noopener noreferrer" className={styles.noteLink}>
           LinkedIn page
         </a>
         , and to registered talent network members first.

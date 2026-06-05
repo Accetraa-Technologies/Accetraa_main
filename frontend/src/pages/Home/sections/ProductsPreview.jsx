@@ -52,6 +52,7 @@ const ProductsPreview = () => {
             {products.map((product) => (
               <ProductCard
                 key={product.id ?? product.slug ?? product.name}
+                thumbnail={product.thumbnail_url ?? null}
                 badge={asString(product.badge ?? product.tag)}
                 title={asString(product.name ?? product.title)}
                 description={asString(product.description)}

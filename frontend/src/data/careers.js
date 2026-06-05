@@ -91,8 +91,24 @@ export const cultureValues = [
 // Used by Careers/LifeAtAccetraa section — placeholder grid until real photos added.
 
 export const photoPlaceholders = [
-  { label: 'Team Collaboration',     aspect: 'wide' },
-  { label: 'Engineering Deep-Dives', aspect: 'tall' },
-  { label: 'Remote-First Working',   aspect: 'square' },
-  { label: 'Knowledge Sharing',      aspect: 'wide' },
+  {
+    label: 'Team Collaboration',
+    aspect: 'wide',
+    src: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&h=600&fit=crop&auto=format',
+  },
+  {
+    label: 'Engineering Deep-Dives',
+    aspect: 'tall',
+    src: 'https://images.unsplash.com/photo-1531482615713-2afd69097998?w=600&h=800&fit=crop&auto=format',
+  },
+  {
+    label: 'Remote-First Working',
+    aspect: 'square',
+    src: 'https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?w=600&h=600&fit=crop&auto=format',
+  },
+  {
+    label: 'Knowledge Sharing',
+    aspect: 'wide',
+    src: 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=600&fit=crop&auto=format',
+  },
 ];

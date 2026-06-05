@@ -11,9 +11,9 @@ const LocationSection = () => (
           <div className={styles.mapPin} aria-hidden="true">
             <PinIcon />
           </div>
-          <p className={styles.mapLabel}>Hubbali, Karnataka, India</p>
+          <p className={styles.mapLabel}>Hubballi, Karnataka, India</p>
           <a
-            href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(FOOTER_CONTACT.address)}`}
+            href="https://maps.app.goo.gl/capFawsKn6dtWKX36"
             target="_blank"
             rel="noopener noreferrer"
             className={styles.mapLink}
@@ -34,7 +34,9 @@ const LocationSection = () => (
                 <span className={styles.addressLabel}>Registered Address</span>
                 <address className={styles.addressText}>
                   Accetraa Technologies Pvt. Ltd.<br />
-                  Hubbali, Karnataka 580029<br />
+                  Foundation for Sandboxstartup Initiatives,<br />
+                  Deshpande Startups, Gokul Rd,<br />
+                  Hubballi, Karnataka 580027<br />
                   India
                 </address>
               </div>

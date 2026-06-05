@@ -1,30 +1,41 @@
+// ─── Team members ─────────────────────────────────────────────────────────────
+// `avatar` paths are relative to /public — copy images to public/images/team/
+
 export const teamMembers = [
   {
-    name: 'Arjun Nair',
-    role: 'Chief Executive Officer',
+    name: 'Kiran H',
+    role: 'Co-Founder, Accetraa Technologies Pvt Ltd',
     description:
-      'Technology entrepreneur and product leader with extensive experience in building SaaS platforms and leading engineering teams. Passionate about using technology to transform traditional service industries.',
+      'Entrepreneur and technology leader with a vision to build software that is meaningful, accessible, and built to last. Leading Accetraa with a commitment to excellence, integrity, and long-term impact.',
+    avatar: '/images/team/kiran-h.png',
+  },
+  {
+    name: 'Keerthana',
+    role: 'CTO – Chief Technology Officer',
+    description:
+      'Drives technology strategy, software development, and product architecture. Leads engineering teams and champions technical innovation to power Accetraa\'s platform and product roadmap.',
     avatar: null,
   },
   {
-    name: 'Priya Sharma',
-    role: 'Chief Technology Officer',
+    name: 'Raja K',
+    role: 'CFO – Chief Financial Officer',
     description:
-      'Cloud architecture specialist experienced in designing scalable, multi-tenant SaaS systems on AWS and Azure. Leads all platform engineering and technical strategy for Accetraa\'s product portfolio.',
-    avatar: null,
-  },
-  {
-    name: 'Rohit Desai',
-    role: 'VP — Engineering',
-    description:
-      'Full-stack engineer and engineering leader responsible for delivery teams and the technical standards that define Accetraa\'s engineering culture. Focused on platform quality, performance, and reliability.',
-    avatar: null,
-  },
-  {
-    name: 'Ananya Krishnan',
-    role: 'Head of Client Success',
-    description:
-      'Customer success leader focused on ensuring every client achieves measurable outcomes from our platforms. Leads onboarding, support, and partnership programmes across Accetraa\'s product and services portfolio.',
+      'Oversees financial planning, budgeting, accounting, and fundraising. Manages investor relations, taxation, and financial compliance to ensure Accetraa\'s sustainable growth.',
     avatar: null,
   },
 ];
+
+// ─── Founder message ──────────────────────────────────────────────────────────
+// Used by FounderMessage section on the About page.
+
+export const founderMessage = {
+  name: 'Kiran H',
+  role: 'Co-Founder, Accetraa Technologies Pvt Ltd',
+  avatar: '/images/team/kiran-h.png',
+  message: [
+    'At Accetraa Technologies, we believe that the true power of technology lies not in its complexity, but in its ability to transform the way businesses grow, operate, and connect.',
+    'At Accetraa, our core commitment is to deliver excellence with integrity. We design and develop technology solutions that are purposeful, reliable, and capable of creating lasting impact for businesses and communities at every scale.',
+    'We leverage Artificial Intelligence, Cloud Infrastructure, and Process Automation to build solutions that are scalable, inclusive, and human-centred. Every product we create is grounded in real-world utility and engineered to deliver genuine value to the people and businesses we serve.',
+    'We are not just building software; we are crafting the infrastructure for a smarter, more connected tomorrow. We invite you to join us as we bridge the gap between where you are and where you aspire to be.',
+  ],
+};

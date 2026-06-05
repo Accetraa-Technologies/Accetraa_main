@@ -110,10 +110,23 @@
   border: 1px solid $border-color;
   border-radius: $radius-xl;
   overflow: hidden;
+  position: relative;
 
   &--wide   { aspect-ratio: 4 / 3; grid-column: span 2; }
   &--tall   { aspect-ratio: 3 / 4; }
   &--square { aspect-ratio: 1 / 1; }
+}
+
+.photoImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform $transition-slow $easing-standard;
+
+  .photo:hover & {
+    transform: scale(1.04);
+  }
 }
 
 .photoInner {

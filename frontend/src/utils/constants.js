@@ -36,9 +36,9 @@ export const FOOTER_SERVICES = [
 ];
 
 export const FOOTER_CONTACT = {
-  email:   'contact@accetraa.com',
-  phone:   '+91 98765 43210',
-  address: 'Hubbali, Karnataka, India',
+  email:   'businessaccetraacompany@gmail.com',
+  phone:   '+91 72048 81705',
+  address: 'Hubballi, Karnataka 580027, India',
 };
 
 export const BREAKPOINTS = {

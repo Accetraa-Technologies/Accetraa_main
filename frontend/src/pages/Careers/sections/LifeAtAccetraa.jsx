@@ -44,17 +44,24 @@ const LifeAtAccetraa = () => (
 
         <div className={styles.right}>
           <div className={styles.photoGrid}>
-            {photoPlaceholders.map(({ label, aspect }) => (
+            {photoPlaceholders.map(({ label, aspect, src }) => (
               <div
                 key={label}
                 className={`${styles.photo} ${styles[`photo--${aspect}`]}`}
-                aria-label={`${label} — photo coming soon`}
-                role="img"
               >
-                <div className={styles.photoInner}>
-                  <PhotoIcon />
-                  <span className={styles.photoLabel}>{label}</span>
-                </div>
+                {src ? (
+                  <img
+                    src={src}
+                    alt={label}
+                    className={styles.photoImg}
+                    loading="lazy"
+                  />
+                ) : (
+                  <div className={styles.photoInner} aria-label={`${label} — photo coming soon`} role="img">
+                    <PhotoIcon />
+                    <span className={styles.photoLabel}>{label}</span>
+                  </div>
+                )}
               </div>
             ))}
           </div>

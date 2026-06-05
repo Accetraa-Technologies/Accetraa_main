@@ -7,22 +7,22 @@ const TeamSection = () => (
   <section className={styles.section} aria-label="Our team">
     <div className="container">
       <SectionHeader
-        eyebrow="The Team"
-        title="Senior leaders. Proven experience."
-        subtitle="Our leadership team combines deep technical expertise with strategic business acumen. Every client engagement benefits directly from their involvement."
+        eyebrow="Leadership Team"
+        title="Built by people who believe in what we build."
+        subtitle="Accetraa is founded and led by a team with deep technical, financial, and operational expertise — united by a clear vision to create software that creates lasting impact."
         align="center"
         className={styles.header}
       />
 
       <div className={styles.grid}>
         {teamMembers.map(member => (
-          <TeamMemberCard key={member.name} {...member} />
+          <TeamMemberCard key={member.name} name={member.name} role={member.role} description={member.description} image={member.avatar} />
         ))}
       </div>
 
       <p className={styles.footnote}>
-        Our full team of engineers, designers, and consultants grows with every engagement.
-        We match the right talent to every project — not just who is available.
+        Our engineering and delivery team grows with every engagement.
+        We bring in the right expertise for every project.
       </p>
     </div>
   </section>

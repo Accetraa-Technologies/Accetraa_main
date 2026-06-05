@@ -3,6 +3,7 @@ import PageHero from '@/components/shared/PageHero';
 import CTABanner from '@/components/shared/CTABanner';
 import { ROUTES } from '@/utils/constants';
 import CompanyIntro from './sections/CompanyIntro';
+import FounderMessage from './sections/FounderMessage';
 import MissionVision from './sections/MissionVision';
 import CoreValues from './sections/CoreValues';
 import WhyChooseUs from './sections/WhyChooseUs';
@@ -33,6 +34,7 @@ const About = () => (
       />
 
       <CompanyIntro />
+      <FounderMessage />
       <MissionVision />
       <CoreValues />
       <StatisticsSection />
