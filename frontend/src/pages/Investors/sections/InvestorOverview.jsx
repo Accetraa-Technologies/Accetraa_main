@@ -19,7 +19,7 @@ const InvestorOverview = () => (
           <SectionHeader
             eyebrow="Why Accetraa"
             title="An early-stage SaaS company with a clear product vision and a large addressable market"
-            subtitle="Founded in 2026, Accetraa is building the technology infrastructure for the beauty, wellness, and service industries — starting with UrSaloon and expanding into a full vertical SaaS ecosystem."
+            subtitle="Founded in 2026, Accetraa is a software and SaaS product company with a clear growth roadmap — building proprietary platforms and delivering software services for businesses across industries."
             align="left"
           />
 

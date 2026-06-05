@@ -18,24 +18,23 @@ const CompanyIntro = () => (
         <div className={styles.left}>
           <SectionHeader
             eyebrow="About Accetraa Technologies"
-            title="Building the future of beauty and wellness technology"
-            subtitle="Founded in 2026, Accetraa Technologies is a product-led technology company focused on building innovative SaaS platforms and AI-driven solutions for the beauty, wellness, and service industries."
+            title="A software and SaaS product company built to grow"
+            subtitle="Founded in 2026, Accetraa Technologies builds proprietary SaaS platforms and delivers software engineering, AI solutions, and digital transformation services for businesses across industries."
             align="left"
           />
 
           <p className={styles.body}>
-            Our flagship platform, UrSaloon, is a comprehensive cloud-based SaaS solution
-            for salons, spas, beauty parlours, and independent beauty professionals —
-            covering appointment management, staff scheduling, billing, inventory, and customer
-            loyalty. We are actively onboarding businesses across India and building the
-            foundation for global expansion.
+            We are not a staffing agency, and we are not a generic IT consultancy. Accetraa
+            is a product-led technology company — we build software that we own, operate,
+            and evolve over time. Every service engagement is backed by the same engineering
+            standards we apply to our own products.
           </p>
 
           <p className={styles.body}>
-            Headquartered in Karnataka, India, Accetraa combines deep technical expertise
-            with industry-focused product design. Alongside our SaaS products, we deliver
-            software development, AI consulting, and digital transformation services to help
-            businesses of all sizes modernise their operations.
+            Headquartered in Karnataka, India, our team combines deep technical expertise
+            with a product-first mindset. Whether you need a custom software solution, want
+            to partner on a SaaS product, or need AI and digital transformation support —
+            Accetraa delivers with clarity, quality, and long-term accountability.
           </p>
         </div>
 

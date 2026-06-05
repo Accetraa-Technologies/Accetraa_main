@@ -2,9 +2,9 @@
 
 export const investorHero = {
   badge: 'Investment Opportunity — 2026',
-  heading: 'Partner with an Early-Stage SaaS Company Building the Future of Beauty & Wellness Tech',
+  heading: 'Partner with an Early-Stage SaaS and Software Technology Company',
   description:
-    'Accetraa Technologies was founded in 2026 with a clear product vision — to build scalable, AI-enhanced SaaS platforms for the beauty, wellness, and service industries. Our flagship platform, UrSaloon, is already onboarding salons, spas, and beauty professionals across India.',
+    'Accetraa Technologies was founded in 2026 to build scalable SaaS products and deliver AI-driven software solutions. We are an early-stage technology company with a clear product roadmap, a strong technical foundation, and a long-term vision for growth across industries.',
   primaryCTA:   { label: 'Schedule Investor Discussion', href: '/contact' },
   secondaryCTA: { label: 'Contact Leadership Team',      href: '/contact' },
 };
@@ -13,28 +13,28 @@ export const investorHero = {
 
 export const investorOverview = {
   mission:
-    'To build innovative, scalable SaaS platforms that transform how beauty, wellness, and service businesses operate, serve their customers, and grow.',
+    'To build innovative, scalable SaaS products and deliver high-quality software solutions that help businesses operate more efficiently and grow with confidence — across any industry.',
   vision:
-    'To become a leading technology and SaaS company delivering innovative platforms for beauty, wellness, and service industries worldwide.',
+    'To become a leading technology and SaaS company, recognised for the quality of our engineering, the reliability of our products, and the tangible impact we create for the organisations we serve.',
   marketOpportunity:
-    'The global beauty and wellness industry is valued at over $1.5 trillion and growing rapidly. India alone has over 7 million salons, spas, and beauty businesses — the vast majority underserved by modern technology. Accetraa is building the digital infrastructure that powers this transition, starting with UrSaloon and expanding into AI-driven marketplace and freelancer platforms.',
+    'The global SaaS market is projected to exceed $1 trillion by 2030. Businesses across every industry are actively replacing manual processes and legacy systems with cloud-native software. Accetraa is positioned to capture this opportunity — building proprietary SaaS products and providing the software engineering capability that enables this transition.',
   highlights: [
-    { value: '2026', label: 'Founded' },
-    { value: 'UrSaloon', label: 'Flagship Platform' },
-    { value: 'Seed', label: 'Investment Stage' },
-    { value: '2029', label: 'Expansion Target' },
+    { value: '2026',  label: 'Founded' },
+    { value: 'SaaS',  label: 'Business Model' },
+    { value: 'Seed',  label: 'Investment Stage' },
+    { value: '2029',  label: 'Expansion Target' },
   ],
 };
 
 // ─── Growth metrics ───────────────────────────────────────────────────────────
 
 export const growthMetrics = [
-  { value: '2026', label: 'Founded',              description: 'Incorporated in Karnataka, India' },
-  { value: 'UrSaloon', label: 'Flagship SaaS',   description: 'Salon, spa, and beauty management platform' },
-  { value: '4',    label: 'Core Services',        description: 'Software, SaaS, AI, and digital transformation' },
-  { value: 'India', label: 'Launch Market',       description: 'Active customer onboarding across India' },
-  { value: '2028', label: 'Global Entry',         description: 'International market expansion planned' },
-  { value: '2029', label: 'Seed Round Target',    description: 'Investment readiness and growth funding planned' },
+  { value: '2026',  label: 'Founded',             description: 'Incorporated in Karnataka, India' },
+  { value: 'SaaS',  label: 'Core Model',          description: 'Subscription-based product revenue — scalable and recurring' },
+  { value: '4',     label: 'Core Services',        description: 'Software, SaaS, AI, and digital transformation' },
+  { value: 'India', label: 'Launch Market',        description: 'Active product development and client onboarding' },
+  { value: '2028',  label: 'Global Entry',         description: 'International market expansion planned' },
+  { value: '2029',  label: 'Seed Round Target',    description: 'Structured investment readiness and growth funding' },
 ];
 
 // ─── Why invest ───────────────────────────────────────────────────────────────
@@ -44,32 +44,32 @@ export const whyInvest = [
   {
     iconKey: 'model',
     title: 'SaaS-First Business Model',
-    body: 'UrSaloon is built as a scalable, multi-tenant SaaS platform — designed for subscription-based recurring revenue that compounds as our customer base grows across India and international markets.',
+    body: 'Our flagship product is built as a scalable, multi-tenant SaaS platform — designed for subscription-based recurring revenue that compounds as the customer base grows, domestically and internationally.',
   },
   {
     iconKey: 'delivery',
-    title: 'Clear Product Roadmap to 2029',
-    body: 'Our product and growth roadmap through 2029 includes marketplace expansion, freelancer ecosystem, AI-powered features, and international market entry — each phase with defined milestones and success criteria.',
+    title: 'Clear Product and Growth Roadmap',
+    body: 'Our roadmap through 2029 includes product expansion, new SaaS verticals, AI feature development, and international market entry — each phase with defined milestones and measurable success criteria.',
   },
   {
     iconKey: 'clients',
-    title: 'Massive Addressable Market',
-    body: 'India has over 7 million salons, spas, and beauty businesses — most operating without modern software. Our SaaS platform addresses a massive, underserved market at the right time in their digital adoption curve.',
+    title: 'Large and Growing Addressable Market',
+    body: 'Businesses across every industry are actively adopting cloud software to replace manual and legacy systems. Accetraa builds in this transition window — delivering SaaS products and services to businesses at the right point in their digital maturity.',
   },
   {
     iconKey: 'leadership',
     title: 'Experienced Founding Team',
-    body: 'Our founding team brings expertise in software engineering, SaaS product development, and enterprise technology delivery — backed by strong technical fundamentals and a clear vision for the beauty and wellness market.',
+    body: 'Our founding team brings expertise in software engineering, SaaS product development, and enterprise technology delivery — backed by strong technical fundamentals and a disciplined approach to building for scale.',
   },
   {
     iconKey: 'industry',
-    title: 'Purpose-Built for the Industry',
-    body: 'Accetraa is not a generic platform adapted for beauty — we are purpose-built for the sector. This means faster product decisions, stronger customer fit, and a competitive position that horizontal platforms cannot easily replicate.',
+    title: 'Product and Services Synergy',
+    body: 'Accetraa combines proprietary SaaS product development with software engineering services — creating a business model where services revenue funds product growth, and products create long-term defensible asset value.',
   },
   {
     iconKey: 'vision',
     title: 'Long-Term SaaS Platform Vision',
-    body: 'Beyond UrSaloon, our roadmap includes a beauty product marketplace, a freelancer professional network, and AI-driven business intelligence tools — building a vertically integrated technology ecosystem for the industry.',
+    body: 'Our roadmap extends beyond a single product. We are building a portfolio of SaaS platforms across verticals — each one an independently scalable product with its own recurring revenue base and market position.',
   },
 ];
 
@@ -80,35 +80,35 @@ export const investmentHighlights = [
     year: '2026',
     title: 'Company Founded',
     description:
-      'Accetraa Technologies incorporated in Karnataka, India. Focused on software development, SaaS products, AI solutions, and digital transformation services. Began building proprietary platforms including UrSaloon.',
+      'Accetraa Technologies incorporated in Karnataka, India. Focused on software development, SaaS product engineering, AI solutions, and digital transformation services. Began building the first proprietary SaaS platform.',
     tag: 'Foundation',
   },
   {
     year: '2026',
-    title: 'UrSaloon Platform Development',
+    title: 'First SaaS Product Development',
     description:
-      'Development of UrSaloon for salon appointments, spas, beauty professionals, and beauty product marketplace services. Built a scalable cloud-based SaaS architecture. Started onboarding salons, beauty parlours, freelancers, and beauty professionals.',
+      'Development of the first proprietary SaaS platform — a cloud-based management solution built on scalable multi-tenant architecture. Began onboarding initial clients and refining the product based on real user feedback.',
     tag: 'Product',
   },
   {
     year: '2027',
     title: 'Market Expansion',
     description:
-      'Expand customer acquisition across India. Launch beauty product marketplace. Expand freelancer ecosystem. Build partnerships with beauty brands, distributors, and salon chains.',
+      'Scale customer acquisition across India. Expand software services client base. Build strategic partnerships with technology providers and enterprise clients. Grow engineering and delivery capacity.',
     tag: 'Growth',
   },
   {
     year: '2028',
     title: 'Scale & Strategic Partnerships',
     description:
-      'Expand into international markets. Launch additional SaaS products. Strengthen enterprise software and AI consulting offerings. Build strategic global partnerships with beauty industry leaders.',
+      'Expand into international markets. Launch additional SaaS products across new verticals. Strengthen AI consulting and digital transformation service offerings. Build strategic global partnerships.',
     tag: 'Partnership',
   },
   {
     year: '2029',
     title: 'Investment Readiness',
     description:
-      'Scale engineering and customer success teams. Accelerate sales and marketing investment. Raise seed investment or strategic growth funding. Support international expansion initiatives.',
+      'Scale engineering and customer success teams. Accelerate sales and marketing investment. Raise seed investment or strategic growth funding. Support international expansion and new product launches.',
     tag: 'Roadmap',
   },
 ];

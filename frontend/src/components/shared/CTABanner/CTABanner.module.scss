@@ -104,9 +104,20 @@
 
 .actions {
   display: flex;
-  flex-wrap: wrap;
-  gap: $space-4;
+  flex-direction: column;
+  align-items: stretch;
+  gap: $space-3;
   flex-shrink: 0;
+
+  > * { text-align: center; justify-content: center; }
+
+  @include respond-to('sm') {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+
+    > * { text-align: left; justify-content: initial; }
+  }
 
   // Outline button on dark bg needs white border
   :global(.btn--outline) {
@@ -122,5 +133,9 @@
 }
 
 .banner--center .actions {
-  justify-content: center;
+  align-items: center;
+
+  @include respond-to('sm') {
+    justify-content: center;
+  }
 }

@@ -6,7 +6,6 @@ import CompanyOverview from './sections/CompanyOverview';
 import ServicesPreview from './sections/ServicesPreview';
 import ProductsPreview from './sections/ProductsPreview';
 import WhyChooseUs from './sections/WhyChooseUs';
-import TestimonialsSection from './sections/TestimonialsSection';
 
 const Home = () => (
   <>
@@ -21,7 +20,6 @@ const Home = () => (
       <ServicesPreview />
       <ProductsPreview />
       <WhyChooseUs />
-      <TestimonialsSection />
       <CTABanner
         eyebrow="Start Your Journey"
         heading="Ready to accelerate your digital future?"

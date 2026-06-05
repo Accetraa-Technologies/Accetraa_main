@@ -11,7 +11,7 @@ const CompanyOverview = () => (
         <SectionHeader
           eyebrow="Who We Are"
           title="A product-led technology company built for growth."
-          subtitle="Founded in 2026, Accetraa Technologies builds SaaS platforms and delivers AI-driven software solutions for the beauty, wellness, and service industries — combining product engineering expertise with a clear long-term vision."
+          subtitle="Founded in 2026, Accetraa Technologies builds proprietary SaaS products and delivers AI-driven software solutions for businesses across industries — combining product engineering expertise with a clear long-term vision."
           align="left"
         />
       </div>

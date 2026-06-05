@@ -24,7 +24,7 @@ export const teamMembers = [
     name: 'Ananya Krishnan',
     role: 'Head of Client Success',
     description:
-      'Customer success leader focused on ensuring every client achieves measurable outcomes from our platforms. Leads onboarding, support, and partnership programmes for beauty and wellness businesses on UrSaloon.',
+      'Customer success leader focused on ensuring every client achieves measurable outcomes from our platforms. Leads onboarding, support, and partnership programmes across Accetraa\'s product and services portfolio.',
     avatar: null,
   },
 ];

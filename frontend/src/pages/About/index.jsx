@@ -20,13 +20,13 @@ const About = () => (
   <>
     <SEO
       title="About Us"
-      description="Accetraa Technologies is a product-led technology company founded in 2026, building innovative SaaS platforms and AI-driven solutions for the beauty, wellness, and service industries."
+      description="Accetraa Technologies is a product-led technology company founded in 2026. We build proprietary SaaS products and deliver software engineering, AI solutions, and digital transformation services for businesses across industries."
     />
 
     <main>
       <PageHero
         title="About Accetraa Technologies"
-        subtitle="Founded in 2026, we are a product-led technology company building SaaS platforms and AI-driven solutions for the beauty, wellness, and service industries."
+        subtitle="Founded in 2026 — a product-led technology company building SaaS platforms, AI solutions, and custom software for businesses across industries."
         breadcrumbs={BREADCRUMBS}
         size="sm"
         align="center"

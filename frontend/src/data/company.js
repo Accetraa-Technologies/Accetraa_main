@@ -2,10 +2,10 @@
 // Used by HeroSection.
 
 export const heroStats = [
-  { value: 'UrSaloon',    label: 'Flagship Platform' },
-  { value: 'Salon & Spa', label: 'Primary Market' },
-  { value: 'AI-Powered',  label: 'Smart Automation' },
-  { value: '2026',        label: 'Founded' },
+  { value: 'SaaS',    label: 'Product Development' },
+  { value: 'AI',      label: 'Intelligent Solutions' },
+  { value: 'Cloud',   label: 'Native Architecture' },
+  { value: '2026',    label: 'Founded' },
 ];
 
 // ─── Company overview metrics ─────────────────────────────────────────────────
@@ -25,17 +25,17 @@ export const companyDifferentiators = [
   {
     number: '01',
     title: 'Product-Led Growth',
-    body: 'We build proprietary SaaS platforms — not just services. UrSaloon, our flagship platform, demonstrates our ability to design, build, and scale products that create lasting market value.',
+    body: 'We build proprietary SaaS platforms, not just services. Our flagship product demonstrates our ability to design, build, and scale software that creates lasting market value across any industry.',
   },
   {
     number: '02',
     title: 'Cloud-Native from the Ground Up',
-    body: 'Every platform we build is designed for scale from day one — multi-tenant SaaS architecture, cloud-native infrastructure, and AI-enhanced features built in from the start.',
+    body: 'Every platform we build is designed for scale from day one — multi-tenant SaaS architecture, cloud-native infrastructure, and AI-enhanced capabilities built in from the start.',
   },
   {
     number: '03',
-    title: 'Focused Industry Expertise',
-    body: 'We are purpose-built for beauty, wellness, and service industries — bringing deep domain knowledge that enables faster decisions, better product fit, and a stronger competitive position.',
+    title: 'End-to-End Ownership',
+    body: 'We take full responsibility from product strategy through engineering, deployment, and long-term support — one team accountable for the entire journey.',
   },
 ];
 
@@ -46,29 +46,29 @@ export const statsSection = {
   eyebrow: 'Where We Stand',
   title: 'A technology company built for the future',
   subtitle:
-    'Accetraa was incorporated in 2026 with a clear mandate — to build scalable SaaS platforms and deliver AI-driven solutions for the beauty, wellness, and service industries.',
+    'Accetraa was incorporated in 2026 with a clear mandate — to build scalable SaaS products and deliver AI-driven software solutions for businesses across industries.',
 };
 
 // ─── Company milestone stats ──────────────────────────────────────────────────
 // Used by StatisticsSection on the About page.
 
 export const companyStats = [
-  { value: '2026', label: 'Year Founded',        description: 'Incorporated in Karnataka, India with a global product vision' },
-  { value: 'SaaS', label: 'Business Model',      description: 'Subscription-based platform revenue — scalable and recurring' },
-  { value: '1st',  label: 'Platform Launched',   description: 'UrSaloon — our flagship salon and spa management SaaS platform' },
-  { value: 'AI',   label: 'Technology Core',     description: 'AI-enhanced features driving intelligent automation across products' },
-  { value: '2029', label: 'Investment Roadmap',  description: 'Seed funding and international expansion planned by 2029' },
-  { value: '100%', label: 'Product-Led',         description: 'Every service we offer is backed by proprietary platform capability' },
+  { value: '2026', label: 'Year Founded',       description: 'Incorporated in Karnataka, India with a global product vision' },
+  { value: 'SaaS', label: 'Business Model',     description: 'Subscription-based platform revenue — scalable and recurring' },
+  { value: '1st',  label: 'Platform Launched',  description: 'UrSaloon — our flagship cloud-based SaaS management platform' },
+  { value: 'AI',   label: 'Technology Core',    description: 'AI-enhanced features driving intelligent automation across products' },
+  { value: '2029', label: 'Investment Roadmap', description: 'Seed funding and international expansion planned by 2029' },
+  { value: '100%', label: 'Product-Led',        description: 'Every service we offer is backed by proprietary platform capability' },
 ];
 
 // ─── Portfolio success metrics ────────────────────────────────────────────────
 // Used by SuccessMetrics section on the Portfolio page.
 
 export const portfolioMetrics = [
-  { value: '2026', label: 'Founded',              sub: 'Incorporated in Karnataka, India' },
-  { value: '1',    label: 'SaaS Platform',        sub: 'UrSaloon — beauty and wellness management' },
-  { value: '4',    label: 'Core Services',        sub: 'Software, SaaS, AI, and digital transformation' },
-  { value: 'Seed', label: 'Investment Stage',     sub: 'Actively building towards our first funding round' },
+  { value: '2026', label: 'Founded',          sub: 'Incorporated in Karnataka, India' },
+  { value: '1',    label: 'SaaS Platform',    sub: 'UrSaloon — our first proprietary SaaS product' },
+  { value: '4',    label: 'Core Services',    sub: 'Software, SaaS, AI, and digital transformation' },
+  { value: 'Seed', label: 'Investment Stage', sub: 'Actively building towards our first funding round' },
 ];
 
 // ─── Core values ──────────────────────────────────────────────────────────────
@@ -79,7 +79,7 @@ export const coreValues = [
   {
     iconKey: 'innovation',
     title: 'Innovation',
-    body: 'We continuously invest in emerging technologies and modern engineering practices to build platforms that stay ahead of industry needs — not just catch up to them.',
+    body: 'We continuously invest in emerging technologies and modern engineering practices to build platforms that stay ahead of market needs — not just catch up to them.',
   },
   {
     iconKey: 'integrity',
@@ -89,7 +89,7 @@ export const coreValues = [
   {
     iconKey: 'clientSuccess',
     title: 'Client Success',
-    body: 'Every product decision we make is evaluated through the lens of client outcomes. The businesses that use our platforms should grow because of them.',
+    body: 'Every product decision we make is evaluated through the lens of client outcomes. The businesses that use our platforms and services should grow because of them.',
   },
   {
     iconKey: 'collaboration',
@@ -113,14 +113,14 @@ export const coreValues = [
 
 export const missionVision = {
   mission: {
-    title: 'Delivering platforms that transform how service businesses operate',
-    body: 'Our mission is to build innovative, scalable SaaS platforms that enable beauty, wellness, and service industry businesses to operate more efficiently, serve their customers better, and grow with confidence. We measure success not by lines of code delivered, but by the real impact our products create for every business that uses them.',
+    title: 'Delivering software products and solutions that create real business value',
+    body: 'Our mission is to build innovative, scalable SaaS platforms and deliver high-quality software solutions that help businesses of any size operate more efficiently and grow with confidence. We measure success not by lines of code delivered, but by the real impact our products create for every organisation that uses them.',
     pills: ['Product-first thinking', 'Measurable outcomes', 'Long-term platform value'],
   },
   vision: {
-    title: 'To become a leading technology and SaaS company for beauty, wellness, and service industries worldwide',
-    body: 'We envision a future where Accetraa-built platforms power millions of beauty and wellness businesses globally — from independent freelancers to multi-location salon chains. A company recognised not for its size, but for the quality of its products and the depth of its impact on the industries it serves.',
-    pills: ['SaaS at global scale', 'Industry-defining platforms', 'Beauty & wellness tech leader'],
+    title: 'To become a leading technology and SaaS company delivering platforms that matter',
+    body: 'We envision a future where Accetraa-built platforms power businesses across industries globally — a company recognised not for its scale, but for the quality of its engineering, the reliability of its products, and the depth of its impact on the organisations it serves.',
+    pills: ['SaaS at global scale', 'Industry-defining platforms', 'Engineering excellence'],
   },
 };
 
@@ -137,14 +137,14 @@ export const aboutDifferentiators = [
   {
     number: '02',
     title: 'Modern Technology Stack',
-    body: 'We work with proven, contemporary technologies — React, Node.js, Python, Kubernetes, AWS, and beyond. Cloud-native by default, with AI capabilities built into the platform from the start.',
+    body: 'We work with proven, contemporary technologies — React, Node.js, Python, Kubernetes, AWS, and beyond. Cloud-native by default, with AI capabilities built into every platform from the start.',
     highlight: 'Cloud-native by default',
   },
   {
     number: '03',
-    title: 'Domain-Focused Product Design',
-    body: 'We specialise in beauty, wellness, and service industries — which means our product decisions are grounded in deep domain knowledge. We understand the workflows, the customers, and the competitive landscape.',
-    highlight: 'Deep domain knowledge',
+    title: 'Domain-Agnostic Product Design',
+    body: 'We build for any industry — our product design process starts with deep understanding of the user\'s workflow and business problem, not assumptions about the sector. This produces better software, whatever the domain.',
+    highlight: 'Any domain, any scale',
   },
   {
     number: '04',
@@ -161,13 +161,13 @@ export const aboutDifferentiators = [
 export const homeBenefits = [
   {
     iconKey: 'industry',
-    title: 'Industry Expertise',
-    body: 'Deep domain knowledge in beauty, wellness, and service industries. We understand the workflows, the customer expectations, and the technology gaps our platforms need to close.',
+    title: 'Cross-Industry Expertise',
+    body: 'We build software for any domain. Our team approaches each product with fresh eyes and deep technical rigour — understanding the problem before writing the first line of code.',
   },
   {
     iconKey: 'architecture',
     title: 'Scalable Architecture',
-    body: 'Every platform we build is cloud-native and multi-tenant by design — built to scale from a handful of clients to thousands without re-architecture.',
+    body: 'Every platform we build is cloud-native and multi-tenant by design — built to scale from a handful of users to thousands without re-architecture.',
   },
   {
     iconKey: 'engagement',

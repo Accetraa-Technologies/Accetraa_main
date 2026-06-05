@@ -1,37 +1,37 @@
 export const investorFaqs = [
   {
-    question: 'What industry does Accetraa primarily operate in?',
+    question: 'What does Accetraa Technologies do?',
     answer:
-      'Accetraa is focused on the beauty, wellness, and service industries. Our flagship SaaS platform, UrSaloon, serves salons, spas, beauty parlours, freelancers, and beauty professionals. Alongside our product business, we also offer software development, AI solutions, and digital transformation services to clients across broader industries.',
+      'Accetraa is a technology company that builds SaaS products and delivers software engineering services. We develop cloud-native SaaS platforms for specific industry verticals, and alongside our product business, we offer custom software development, AI solutions, and digital transformation services to businesses across industries.',
   },
   {
     question: 'When was Accetraa founded and what stage is the company at?',
     answer:
-      'Accetraa Technologies was incorporated in 2026 in Karnataka, India. We are an early-stage technology company actively building and onboarding customers to our flagship platform, UrSaloon. We are in the growth phase — focused on product development, initial market traction, and building the foundation for our 2029 seed funding round.',
+      'Accetraa Technologies was incorporated in 2026 in Karnataka, India. We are an early-stage technology company actively building our first proprietary SaaS product and growing our software services client base. We are focused on product development and early market traction, with a structured roadmap to investment readiness by 2029.',
   },
   {
     question: 'Is Accetraa actively seeking investment?',
     answer:
-      'We are building towards a structured investment round targeted for 2029, aligned with our expansion roadmap. We are open to early conversations with strategic investors and angels who understand the beauty and wellness technology market. Conversations are confidential and begin with a mutual NDA.',
+      'We are building towards a structured investment round targeted for 2029, aligned with our product and expansion roadmap. We are open to early conversations with strategic investors and angels who understand the software and SaaS space. All conversations are confidential and begin with a mutual NDA.',
   },
   {
     question: 'How can investors connect with the leadership team?',
     answer:
-      'Reach us through our Contact page. Describe your background and investment interest, and a member of our leadership team will respond to schedule a confidential discussion. We are selective about investor conversations and prioritise those who bring relevant domain or market expertise alongside capital.',
+      'Reach us through our Contact page. Describe your background and investment interest, and a member of our leadership team will respond to schedule a confidential discussion. We prioritise conversations with investors who bring relevant expertise — in technology, SaaS, or our target markets — alongside capital.',
   },
   {
-    question: 'What is the revenue model for UrSaloon?',
+    question: 'What is the revenue model?',
     answer:
-      'UrSaloon operates on a SaaS subscription model — salons, spas, and beauty businesses pay a recurring monthly or annual fee to access the platform. Additional revenue streams include transaction fees from the beauty product marketplace and service fees from the freelancer professional network. This creates a diversified, recurring revenue base that compounds as the customer base grows.',
+      'Accetraa generates revenue through two complementary streams: (1) SaaS product subscriptions — recurring monthly or annual fees from businesses using our proprietary platforms. (2) Software services — project-based and retainer engagements for custom software development, AI solutions, and digital transformation. The services business funds product growth while the SaaS business builds long-term recurring asset value.',
   },
   {
     question: 'What is the growth strategy through 2029?',
     answer:
-      'Our growth roadmap has four phases: (1) 2026 — Platform development and initial customer onboarding in India. (2) 2027 — Market expansion, beauty product marketplace launch, and freelancer ecosystem growth. (3) 2028 — International market entry and strategic industry partnerships. (4) 2029 — Seed investment round and accelerated scale in engineering, sales, and customer success.',
+      'Our roadmap has four phases: (1) 2026 — First SaaS product development and initial market onboarding. (2) 2027 — Customer acquisition growth, services expansion, and team scaling. (3) 2028 — International market entry and launch of additional SaaS products across new verticals. (4) 2029 — Seed investment round, accelerated engineering and sales capacity, and international expansion support.',
   },
   {
-    question: 'What makes Accetraa different from other salon management software companies?',
+    question: 'What makes Accetraa different from other technology companies?',
     answer:
-      'Most salon management tools are point solutions — they handle appointments or billing, but nothing more. Accetraa is building a complete ecosystem: SaaS management platform, beauty product marketplace, freelancer professional network, and AI-driven business intelligence — all integrated. We are also technology-first and AI-native, not a legacy system retrofitted for modern use.',
+      'Three things: First, we are product-led — we build and own our SaaS platforms, which creates long-term asset value beyond a pure services business. Second, we combine proprietary products with software services, giving us diversified revenue and a market presence that grows both ways. Third, our technical foundation is built for scale from day one — cloud-native, multi-tenant architecture, and AI-first thinking across everything we build.',
   },
 ];
