@@ -1,0 +1,129 @@
+@use 'abstracts/variables' as *;
+@use 'abstracts/mixins' as *;
+
+.section {
+  @include section-padding;
+  background-color: $color-surface;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: $space-12;
+
+  @include respond-to('lg') {
+    grid-template-columns: 1fr 380px;
+    align-items: start;
+    gap: $space-20;
+  }
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  gap: $space-10;
+}
+
+.pillars {
+  display: flex;
+  flex-direction: column;
+  gap: $space-6;
+}
+
+.pillar {
+  padding: $space-6;
+  background: $color-surface-alt;
+  border: 1px solid $border-color;
+  border-left: 3px solid $color-primary;
+  border-radius: 0 $radius-lg $radius-lg 0;
+}
+
+.pillarLabel {
+  display: block;
+  font-size: $font-size-xs;
+  font-weight: $font-weight-semibold;
+  letter-spacing: $tracking-widest;
+  text-transform: uppercase;
+  color: $color-primary;
+  margin-bottom: $space-3;
+}
+
+.pillarText {
+  font-size: $font-size-sm;
+  color: $color-neutral-600;
+  line-height: $line-height-relaxed;
+  margin: 0;
+}
+
+// ─── Right column ─────────────────────────────────────────────────────────────
+
+.right {
+  display: flex;
+  flex-direction: column;
+  gap: $space-6;
+
+  @include respond-to('lg') {
+    position: sticky;
+    top: calc($navbar-height + $space-8);
+  }
+}
+
+.highlightGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: $space-4;
+}
+
+.highlightCard {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: $space-3;
+  padding: $space-7 $space-6;
+  background: $color-surface;
+  border: 1px solid $border-color;
+  border-radius: $radius-xl;
+  transition: box-shadow $transition-base, border-color $transition-base, transform $transition-base;
+
+  &:hover {
+    box-shadow: $shadow-hover;
+    border-color: $color-primary-subtle;
+    transform: translateY(-2px);
+  }
+}
+
+.checkIcon {
+  color: $color-secondary;
+  flex-shrink: 0;
+}
+
+.highlightValue {
+  display: block;
+  font-size: $font-size-4xl;
+  font-weight: $font-weight-black;
+  color: $color-neutral-900;
+  letter-spacing: $tracking-tighter;
+  line-height: $line-height-none;
+}
+
+.highlightLabel {
+  font-size: $font-size-sm;
+  font-weight: $font-weight-medium;
+  color: $color-neutral-500;
+  line-height: $line-height-snug;
+}
+
+.trustNote {
+  padding: $space-6;
+  background: $color-primary-subtle;
+  border: 1px solid rgba($color-primary, 0.15);
+  border-radius: $radius-xl;
+}
+
+.trustText {
+  font-size: $font-size-sm;
+  color: $color-primary-dark;
+  line-height: $line-height-relaxed;
+  margin: 0;
+  font-style: italic;
+}

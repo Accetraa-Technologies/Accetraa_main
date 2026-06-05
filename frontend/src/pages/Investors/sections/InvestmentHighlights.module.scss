@@ -1,0 +1,119 @@
+@use 'sass:color';
+@use 'abstracts/variables' as *;
+@use 'abstracts/mixins' as *;
+
+.section {
+  @include section-padding;
+  background: linear-gradient(160deg, $color-neutral-900 0%, $color-neutral-800 100%);
+}
+
+.header {
+  margin-bottom: $space-14;
+}
+
+.timeline {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-width: 760px;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.item {
+  display: grid;
+  grid-template-columns: 28px 1fr;
+  gap: $space-6;
+
+  @include respond-to('md') {
+    grid-template-columns: 40px 1fr;
+    gap: $space-8;
+  }
+}
+
+// ─── Left spine (dot + line) ──────────────────────────────────────────────────
+
+.spine {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: $space-1;
+}
+
+.dot {
+  width: 14px;
+  height: 14px;
+  border-radius: $radius-full;
+  background: $color-primary-light;
+  border: 2px solid $color-primary;
+  box-shadow: 0 0 0 3px rgba($color-primary, 0.2);
+  flex-shrink: 0;
+}
+
+.line {
+  width: 2px;
+  flex: 1;
+  min-height: $space-10;
+  background: linear-gradient(to bottom, $color-primary, rgba($color-primary, 0.15));
+  margin-block: $space-2;
+}
+
+// ─── Right content ────────────────────────────────────────────────────────────
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: $space-3;
+  padding-bottom: $space-10;
+
+  .item:last-child & {
+    padding-bottom: 0;
+  }
+}
+
+.meta {
+  display: flex;
+  align-items: center;
+  gap: $space-3;
+  flex-wrap: wrap;
+}
+
+.year {
+  font-size: $font-size-sm;
+  font-weight: $font-weight-bold;
+  color: $color-primary-light;
+  letter-spacing: $tracking-wide;
+}
+
+.tag {
+  font-size: $font-size-xs;
+  font-weight: $font-weight-semibold;
+  letter-spacing: $tracking-wide;
+  text-transform: uppercase;
+  padding: $space-1 $space-3;
+  border-radius: $radius-full;
+  border: 1px solid transparent;
+
+  &--blue    { background: rgba($color-primary, 0.25); color: $color-primary-light; border-color: rgba($color-primary-light, 0.3); }
+  &--teal    { background: rgba($color-secondary, 0.25); color: $color-secondary-light; border-color: rgba($color-secondary-light, 0.3); }
+  &--green   { background: rgba($color-success, 0.2); color: color.adjust($color-success, $lightness: 20%); border-color: rgba($color-success, 0.35); }
+  &--orange  { background: rgba($color-accent, 0.2); color: $color-accent-light; border-color: rgba($color-accent, 0.35); }
+  &--purple  { background: rgba(139, 92, 246, 0.2); color: #c4b5fd; border-color: rgba(139, 92, 246, 0.35); }
+  &--primary { background: rgba($color-primary-light, 0.2); color: $color-primary-light; border-color: rgba($color-primary-light, 0.3); }
+}
+
+.title {
+  font-size: $font-size-xl;
+  font-weight: $font-weight-semibold;
+  color: $color-white;
+  letter-spacing: $tracking-tight;
+  margin: 0;
+}
+
+.description {
+  font-size: $font-size-sm;
+  color: rgba($color-white, 0.60);
+  line-height: $line-height-relaxed;
+  margin: 0;
+}

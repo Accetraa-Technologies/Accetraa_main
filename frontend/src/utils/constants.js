@@ -3,6 +3,7 @@ export const ROUTES = {
   ABOUT:     '/about',
   SERVICES:  '/services',
   PORTFOLIO: '/portfolio',
+  INVESTORS: '/investors',
   CONTACT:   '/contact',
   CAREERS:   '/careers',
 };
@@ -11,8 +12,7 @@ export const NAV_LINKS = [
   { label: 'Home',      path: ROUTES.HOME },
   { label: 'About',     path: ROUTES.ABOUT },
   { label: 'Services',  path: ROUTES.SERVICES },
-  { label: 'Portfolio', path: ROUTES.PORTFOLIO },
-  { label: 'Contact',   path: ROUTES.CONTACT },
+  { label: 'Investors', path: ROUTES.INVESTORS },
   { label: 'Careers',   path: ROUTES.CAREERS },
 ];
 

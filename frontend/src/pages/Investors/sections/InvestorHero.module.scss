@@ -1,0 +1,79 @@
+@use 'abstracts/variables' as *;
+@use 'abstracts/mixins' as *;
+
+.hero {
+  background-color: $color-neutral-950;
+  background-image:
+    radial-gradient(ellipse 70% 90% at 80% 40%, rgba($color-primary, 0.18) 0%, transparent 60%),
+    radial-gradient(ellipse 40% 60% at 10% 80%, rgba($color-secondary, 0.10) 0%, transparent 60%),
+    radial-gradient(rgba($color-white, 0.025) 1px, transparent 1px);
+  background-size: cover, cover, 36px 36px;
+  padding-top: $space-20;
+  padding-bottom: $space-20;
+
+  @include respond-to('lg') {
+    padding-top: $space-32;
+    padding-bottom: $space-32;
+  }
+}
+
+.inner {
+  max-width: 760px;
+  display: flex;
+  flex-direction: column;
+  gap: $space-7;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: $space-2;
+  font-size: $font-size-xs;
+  font-weight: $font-weight-semibold;
+  letter-spacing: $tracking-widest;
+  text-transform: uppercase;
+  color: $color-secondary-light;
+  padding: $space-2 $space-4;
+  background: rgba($color-secondary, 0.15);
+  border: 1px solid rgba($color-secondary-light, 0.25);
+  border-radius: $radius-full;
+  width: fit-content;
+}
+
+.heading {
+  font-size: $font-size-4xl;
+  font-weight: $font-weight-bold;
+  color: $color-white;
+  letter-spacing: $tracking-tight;
+  line-height: $line-height-tight;
+  margin: 0;
+
+  @include respond-to('md') { font-size: $font-size-5xl; }
+  @include respond-to('lg') { font-size: $font-size-6xl; }
+}
+
+.description {
+  font-size: $font-size-lg;
+  color: rgba($color-white, 0.70);
+  line-height: $line-height-relaxed;
+  margin: 0;
+  max-width: 640px;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $space-4;
+  margin-top: $space-2;
+}
+
+.ghostLight {
+  color: $color-white !important;
+  border-color: rgba($color-white, 0.25) !important;
+
+  &:hover {
+    background-color: rgba($color-white, 0.08) !important;
+    color: $color-white !important;
+    border-color: rgba($color-white, 0.40) !important;
+  }
+}

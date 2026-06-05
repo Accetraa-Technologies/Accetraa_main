@@ -10,6 +10,7 @@ const Home      = lazy(() => import('@/pages/Home'));
 const About     = lazy(() => import('@/pages/About'));
 const Services  = lazy(() => import('@/pages/Services'));
 const Portfolio = lazy(() => import('@/pages/Portfolio'));
+const Investors = lazy(() => import('@/pages/Investors'));
 const Contact   = lazy(() => import('@/pages/Contact'));
 const Careers      = lazy(() => import('@/pages/Careers'));
 const NotFound     = lazy(() => import('@/pages/NotFound'));
@@ -36,6 +37,7 @@ const router = createBrowserRouter([
       { path: ROUTES.ABOUT,     element: <About /> },
       { path: ROUTES.SERVICES,  element: <Services /> },
       { path: ROUTES.PORTFOLIO, element: <Portfolio /> },
+      { path: ROUTES.INVESTORS, element: <Investors /> },
       { path: ROUTES.CONTACT,   element: <Contact /> },
       { path: ROUTES.CAREERS,   element: <Careers /> },
       { path: '/_design',         element: <DesignSystem /> },
