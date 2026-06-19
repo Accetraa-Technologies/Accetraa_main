@@ -4,7 +4,7 @@ Email notification helpers for the consultation app.
 Development: printed to console (EMAIL_BACKEND = console).
 Production:  sent via AWS SES (EMAIL_BACKEND = django_ses.SESBackend).
 """
-from django.core.mail import send_mail
+from django.core.mail import EmailMessage, send_mail
 from django.conf import settings
 import logging
 
@@ -35,13 +35,13 @@ def send_consultation_notification(consultation_request):
     )
 
     try:
-        send_mail(
+        EmailMessage(
             subject=subject,
-            message=body,
+            body=body,
             from_email=settings.DEFAULT_FROM_EMAIL,
-            recipient_list=[settings.SALES_EMAIL],
-            fail_silently=False,
-        )
+            to=[settings.SALES_EMAIL],
+            reply_to=[consultation_request.email],
+        ).send(fail_silently=False)
     except Exception:
         logger.exception(
             'Failed to send consultation notification email for ConsultationRequest id=%s',

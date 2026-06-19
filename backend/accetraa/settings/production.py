@@ -38,25 +38,36 @@ SECURE_CONTENT_TYPE_NOSNIFF    = True
 X_FRAME_OPTIONS                = 'DENY'
 
 # ── Email — AWS SES ────────────────────────────────────────────────────────────
-EMAIL_BACKEND       = 'django_ses.SESBackend'
+# Defaults to django_ses.SESBackend. Override via EMAIL_BACKEND env var if needed.
+# Requires: AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY, AWS_SES_REGION_NAME
+# The sender address (EMAIL_FROM) must be verified in the AWS SES console.
+EMAIL_BACKEND       = config('EMAIL_BACKEND', default='django_ses.SESBackend')
 AWS_SES_REGION_NAME = config('AWS_SES_REGION_NAME', default='ap-south-1')
 
-# ── File Storage — AWS S3 ──────────────────────────────────────────────────────
-DEFAULT_FILE_STORAGE   = 'storages.backends.s3boto3.S3Boto3Storage'
-AWS_ACCESS_KEY_ID      = config('AWS_ACCESS_KEY_ID')
-AWS_SECRET_ACCESS_KEY  = config('AWS_SECRET_ACCESS_KEY')
-AWS_STORAGE_BUCKET_NAME = config('AWS_S3_BUCKET_NAME')
-AWS_S3_REGION_NAME     = config('AWS_S3_REGION_NAME', default='ap-south-1')
-AWS_S3_FILE_OVERWRITE  = False
-AWS_DEFAULT_ACL        = None  # Use bucket ACL; do not make files publicly readable by default
-AWS_S3_OBJECT_PARAMETERS = {
-    'CacheControl': 'max-age=86400',  # 1 day cache for media files
-}
+# ── AWS Credentials ────────────────────────────────────────────────────────────
+# Shared by SES (email) and S3 (file storage).
+# Optional here with empty defaults so the app starts when only SES is configured.
+# django-ses uses these automatically when EMAIL_BACKEND = django_ses.SESBackend.
+AWS_ACCESS_KEY_ID     = config('AWS_ACCESS_KEY_ID',     default='')
+AWS_SECRET_ACCESS_KEY = config('AWS_SECRET_ACCESS_KEY', default='')
 
-_cloudfront_domain = config('AWS_CLOUDFRONT_DOMAIN', default='')
-if _cloudfront_domain:
-    MEDIA_URL = f'https://{_cloudfront_domain}/'
-    AWS_S3_CUSTOM_DOMAIN = _cloudfront_domain
+# ── File Storage — AWS S3 (optional) ──────────────────────────────────────────
+# S3 is only activated when AWS_S3_BUCKET_NAME is provided.
+# If omitted, Django falls back to local disk storage — acceptable when S3 is
+# not yet configured (e.g. email-only AWS setup).
+_s3_bucket = config('AWS_S3_BUCKET_NAME', default='')
+if _s3_bucket:
+    DEFAULT_FILE_STORAGE    = 'storages.backends.s3boto3.S3Boto3Storage'
+    AWS_STORAGE_BUCKET_NAME = _s3_bucket
+    AWS_S3_REGION_NAME      = config('AWS_S3_REGION_NAME', default='ap-south-1')
+    AWS_S3_FILE_OVERWRITE   = False
+    AWS_DEFAULT_ACL         = None
+    AWS_S3_OBJECT_PARAMETERS = {'CacheControl': 'max-age=86400'}
+
+    _cloudfront_domain = config('AWS_CLOUDFRONT_DOMAIN', default='')
+    if _cloudfront_domain:
+        MEDIA_URL = f'https://{_cloudfront_domain}/'
+        AWS_S3_CUSTOM_DOMAIN = _cloudfront_domain
 
 # ── DRF — JSON only in production ─────────────────────────────────────────────
 REST_FRAMEWORK['DEFAULT_RENDERER_CLASSES'] = [  # noqa: F405

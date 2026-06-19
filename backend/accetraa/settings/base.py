@@ -197,13 +197,34 @@ CORS_ALLOW_HEADERS = ['accept', 'authorization', 'content-type', 'origin', 'x-re
 
 # ── Email ──────────────────────────────────────────────────────────────────────
 # Backend is overridden per environment.
+# Development:  django.core.mail.backends.console.EmailBackend  (prints to terminal)
+# Staging:      django.core.mail.backends.dummy.EmailBackend    (discards silently)
+# Production:   django.core.mail.backends.smtp.EmailBackend     (Gmail SMTP)
+#            or django_ses.SESBackend                           (AWS SES)
 EMAIL_BACKEND = config(
     'EMAIL_BACKEND',
     default='django.core.mail.backends.console.EmailBackend',
 )
-DEFAULT_FROM_EMAIL = config('EMAIL_FROM', default='no-reply@accetraa.com')
-SALES_EMAIL       = config('SALES_EMAIL', default='sales@accetraa.com')
-HR_EMAIL          = config('HR_EMAIL',    default='hr@accetraa.com')
+DEFAULT_FROM_EMAIL = config('EMAIL_FROM',      default='no-reply@accetraa.com')
+SALES_EMAIL        = config('SALES_EMAIL',    default='businessaccetraacompany@gmail.com')
+CONTACT_EMAIL      = config('CONTACT_EMAIL',  default='businessaccetraacompany@gmail.com')
+HR_EMAIL           = config('HR_EMAIL',       default='businessaccetraacompany@gmail.com')
+
+# ── SMTP settings (Gmail or any SMTP provider) ─────────────────────────────────
+# Used when EMAIL_BACKEND = django.core.mail.backends.smtp.EmailBackend
+# Gmail setup:
+#   EMAIL_HOST=smtp.gmail.com
+#   EMAIL_PORT=587
+#   EMAIL_USE_TLS=True
+#   EMAIL_HOST_USER=your-gmail@gmail.com
+#   EMAIL_HOST_PASSWORD=<Gmail App Password — NOT your account password>
+#   EMAIL_FROM=your-gmail@gmail.com
+EMAIL_HOST          = config('EMAIL_HOST',          default='smtp.gmail.com')
+EMAIL_PORT          = config('EMAIL_PORT',          default=587, cast=int)
+EMAIL_USE_TLS       = config('EMAIL_USE_TLS',       default=True,  cast=bool)
+EMAIL_USE_SSL       = config('EMAIL_USE_SSL',       default=False, cast=bool)
+EMAIL_HOST_USER     = config('EMAIL_HOST_USER',     default='')
+EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD', default='')
 
 
 # ── Admin Site Branding ────────────────────────────────────────────────────────

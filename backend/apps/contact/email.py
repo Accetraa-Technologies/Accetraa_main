@@ -6,7 +6,7 @@ In production:  emails are sent via AWS SES (EMAIL_BACKEND = django_ses.SESBacke
 
 Both functions are called from signals.py after a ContactRequest is saved.
 """
-from django.core.mail import send_mail
+from django.core.mail import EmailMessage, send_mail
 from django.conf import settings
 import logging
 
@@ -36,13 +36,13 @@ def send_contact_notification(contact_request):
     )
 
     try:
-        send_mail(
+        EmailMessage(
             subject=subject,
-            message=body,
+            body=body,
             from_email=settings.DEFAULT_FROM_EMAIL,
-            recipient_list=[recipient],
-            fail_silently=False,
-        )
+            to=[recipient],
+            reply_to=[contact_request.email],
+        ).send(fail_silently=False)
     except Exception:
         logger.exception(
             'Failed to send contact notification email for ContactRequest id=%s',
