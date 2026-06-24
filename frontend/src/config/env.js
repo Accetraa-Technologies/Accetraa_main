@@ -5,3 +5,4 @@ export const config = {
   // Replaces live contact/consultation/demo forms with informational notices.
   stagingMode: import.meta.env.VITE_STAGING_MODE  === 'true',
 };
+
