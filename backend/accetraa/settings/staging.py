@@ -44,10 +44,13 @@ DATABASES = {
     )
 }
 
-# ── Email — discard silently, no outbound mail on staging ─────────────────────
-# Signal handlers in contact/consultation/demo_requests still fire but all mail
-# is silently dropped. No code changes to signals or views are required.
-EMAIL_BACKEND = 'django.core.mail.backends.dummy.EmailBackend'
+# ── Email ─────────────────────────────────────────────────────────────────────
+# Default: dummy backend (discards silently). Override via EMAIL_BACKEND env var.
+# For production email on Render: set EMAIL_BACKEND=django_ses.SESBackend + AWS creds.
+EMAIL_BACKEND       = config('EMAIL_BACKEND', default='django.core.mail.backends.dummy.EmailBackend')
+AWS_SES_REGION_NAME = config('AWS_SES_REGION_NAME', default='ap-south-1')
+AWS_ACCESS_KEY_ID   = config('AWS_ACCESS_KEY_ID',   default='')
+AWS_SECRET_ACCESS_KEY = config('AWS_SECRET_ACCESS_KEY', default='')
 
 # ── Static files — WhiteNoise serves from /staticfiles/ ──────────────────────
 MIDDLEWARE.insert(1, 'whitenoise.middleware.WhiteNoiseMiddleware')  # noqa: F405
