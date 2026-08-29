@@ -4,7 +4,7 @@
 export const teamMembers = [
   {
     name: 'Kiran H',
-    role: 'Co-Founder, Accetraa Technologies Pvt Ltd',
+    role: 'Founder, Accetraa Technologies Pvt Ltd',
     description:
       'Entrepreneur and technology leader with a vision to build software that is meaningful, accessible, and built to last. Leading Accetraa with a commitment to excellence, integrity, and long-term impact.',
     avatar: '/images/team/kiran-h.png',
@@ -30,7 +30,7 @@ export const teamMembers = [
 
 export const founderMessage = {
   name: 'Kiran H',
-  role: 'Co-Founder, Accetraa Technologies Pvt Ltd',
+  role: 'Founder, Accetraa Technologies Pvt Ltd',
   avatar: '/images/team/kiran-h.png',
   message: [
     'At Accetraa Technologies, we believe that the true power of technology lies not in its complexity, but in its ability to transform the way businesses grow, operate, and connect.',

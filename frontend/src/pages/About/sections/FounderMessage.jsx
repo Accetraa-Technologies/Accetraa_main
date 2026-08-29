@@ -2,7 +2,7 @@ import { founderMessage } from '@/data/team';
 import styles from './FounderMessage.module.scss';
 
 const FounderMessage = () => (
-  <section className={styles.section} aria-label="Message from the Co-Founder">
+  <section className={styles.section} aria-label="Message from the Founder">
     <div className="container">
       <div className={styles.layout}>
 
@@ -32,7 +32,7 @@ const FounderMessage = () => (
 
         {/* Right — message */}
         <div className={styles.right}>
-          <span className={styles.eyebrow}>Message from the Co-Founder</span>
+          <span className={styles.eyebrow}>Message from the Founder</span>
           <div className={styles.quoteWrap} aria-hidden="true">
             <svg width="48" height="36" viewBox="0 0 48 36" fill="none">
               <path d="M0 36V22.5C0 9 7.5 2.5 22.5 0L24 3C15 5 10.5 9.5 10.5 16.5H18V36H0ZM27 36V22.5C27 9 34.5 2.5 49.5 0L51 3C42 5 37.5 9.5 37.5 16.5H45V36H27Z" fill="currentColor" opacity="0.12"/>
